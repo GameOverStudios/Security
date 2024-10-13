@@ -1,0 +1,12 @@
+{
+    "created": "2024-10-12T22:11:43.000000Z",
+    "name": "allow-always-simple-usr-bin-wget",
+    "enabled": true,
+    "action": "allow",
+    "duration": "always",
+    "operator": {
+        "type": "simple",
+        "operand": "process.path",
+        "data": "/usr/bin/wget"
+    }
+}

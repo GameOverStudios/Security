@@ -1,0 +1,12 @@
+{
+    "created": "2024-10-10T11:24:21.000000Z",
+    "name": "deny-always-simple-usr-sbin-ntpd-p-run-ntpd-pid-c-etc-ntpsec-ntp-conf-g-n-u-ntpsec-ntpsec",
+    "enabled": true,
+    "action": "deny",
+    "duration": "always",
+    "operator": {
+        "type": "simple",
+        "operand": "process.command",
+        "data": "/usr/sbin/ntpd -p /run/ntpd.pid -c /etc/ntpsec/ntp.conf -g -N -u ntpsec:ntpsec"
+    }
+}

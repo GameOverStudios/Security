@@ -1,0 +1,12 @@
+{
+    "created": "2024-10-10T10:41:04.000000Z",
+    "name": "deny-always-simple-1900",
+    "enabled": true,
+    "action": "deny",
+    "duration": "always",
+    "operator": {
+        "type": "simple",
+        "operand": "dest.port",
+        "data": "1900"
+    }
+}

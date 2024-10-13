@@ -1,0 +1,12 @@
+{
+    "created": "2024-10-12T22:14:09.000000Z",
+    "name": "allow-always-simple-usr-sbin-xtables-nft-multi",
+    "enabled": true,
+    "action": "allow",
+    "duration": "always",
+    "operator": {
+        "type": "simple",
+        "operand": "process.path",
+        "data": "/usr/sbin/xtables-nft-multi"
+    }
+}

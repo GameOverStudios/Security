@@ -1,0 +1,23 @@
+{
+    "created": "2024-10-12T22:03:03.000000Z",
+    "name": "allow-always-list-opt-google-chrome-chrome-443",
+    "enabled": true,
+    "action": "allow",
+    "duration": "always",
+    "operator": {
+        "type": "list",
+        "operand": "list",
+        "list": [
+            {
+                "type": "simple",
+                "operand": "dest.port",
+                "data": "443"
+            },
+            {
+                "type": "simple",
+                "operand": "process.path",
+                "data": "/opt/google/chrome/chrome"
+            }
+        ]
+    }
+}
