@@ -172,3 +172,7 @@ q
     sudo syatemctl enable tor
     sudo systemctl start tor
     sudo systemctl status tor
+
+    echo ""
+    printf " ${GREEN}[+] Lembre-se de tirar 8.8.8.8 do firewall depois do dnscrypt baixar os repositorios a primeira vez\n"${NC}
+    echo ""
