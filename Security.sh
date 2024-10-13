@@ -174,8 +174,6 @@ EOF
     #sudo systemctl start dnscrypt-proxy
     #sudo systemctl status dnscrypt-proxy
 
-    printf " ${GREEN}[+] Verify DNS Service\n"${NC}
-    ./dnscrypt-proxy -config /etc/dnscrypt-proxy/dnscrypt-proxy.toml -resolve google.com
     #nmtui
 
     printf " ${GREEN}[+] Tor Service\n"${NC}
@@ -189,9 +187,8 @@ EOF
     echo 'echo "nameserver 8.8.8.8" >> /etc/resolv.conf' >> /etc/dnscrypt-proxy/start.sh
     echo 'echo "nameserver 127.0.0.1" >> /etc/resolv.conf' >> /etc/dnscrypt-proxy/start.sh
     echo 'echo "nameserver 127.0.2.1" >> /etc/resolv.conf' >> /etc/dnscrypt-proxy/start.sh
-    echo "nohup /etc/macchange &" >> /etc/dnscrypt-proxy/start.sh
-    echo "nohup /etc/dnscrypt-proxy/dnscrypt-proxy &" >> /etc/dnscrypt-proxy/start.sh
     echo "nohup encrypted-dns -c /etc/dnscrypt-proxy/encrypted-dns.toml &" >> /etc/dnscrypt-proxy/start.sh
+    echo "nohup /etc/dnscrypt-proxy/dnscrypt-proxy &" >> /etc/dnscrypt-proxy/start.sh
     chmod +x /etc/dnscrypt-proxy/start.sh
     
     printf " ${GREEN}[+] DNS Stamp\n"${NC}
@@ -199,7 +196,8 @@ EOF
     echo "DNS Stamp:"
     read dns_stamp
 
-    -e 's/# [static.myserver]/[static.myserver]/' \
+    sudo sed -i \
+        -e 's/# [static.myserver]/[static.myserver]/' \
         -e '/stamp = 'sdns://AQcAAAAAAAAAAAAQMi5kbnNjcnlwdC1jZXJ0Lg/stamp = '$stamp/' \
         /etc/dnscrypt-proxy/dnscrypt-proxy.toml
     
@@ -213,4 +211,6 @@ EOF
     echo ""
 
     printf " ${GREEN}[+] Start\n"${NC}
-    /etc/dnscrypt-proxy/./start
+    sudo /etc/dnscrypt-proxy/start
+    sudo systemctl status macchange
+    sudo cat /etc/dsncrypt-proxy 
