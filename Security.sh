@@ -135,7 +135,6 @@ EOF
     systemctl enable macchange
     systemctl start macchange
     systemctl status macchange
-    #nohup /etc/./macchange &
 
 # -----------------------------------------------------------------------------------------------------------------------
 
@@ -161,8 +160,15 @@ EOF
     sudo systemctl enable dnscrypt-proxy
     sudo systemctl start dnscrypt-proxy
     sudo systemctl status dnscrypt-proxy
-
+q
     printf " ${GREEN}[+] Verify DNS Service\n"${NC}
     ./dnscrypt-proxy -config /etc/dnscrypt-proxy/dnscrypt-proxy.toml -resolve google.com
     nmtui
-    #./dnscrypt-proxy -config /etc/dnscrypt-proxy/dnscrypt-proxy.toml
+    
+    nohup /etc/macchange &
+    nohup /etc/dnscrypt-proxy/dnscrypt-proxy &
+
+    sudo apt install tor torsocks -y
+    sudo syatemctl enable tor
+    sudo systemctl start tor
+    sudo systemctl status tor
