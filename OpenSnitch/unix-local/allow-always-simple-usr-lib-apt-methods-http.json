@@ -1,0 +1,12 @@
+{
+    "created": "2024-10-12T22:23:46.000000Z",
+    "name": "allow-always-simple-usr-lib-apt-methods-http",
+    "enabled": true,
+    "action": "allow",
+    "duration": "always",
+    "operator": {
+        "type": "simple",
+        "operand": "process.path",
+        "data": "/usr/lib/apt/methods/http"
+    }
+}

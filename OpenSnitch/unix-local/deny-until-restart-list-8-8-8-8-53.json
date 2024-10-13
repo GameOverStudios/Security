@@ -1,0 +1,23 @@
+{
+    "created": "2024-10-12T22:42:43.000000Z",
+    "name": "deny-until-restart-list-8-8-8-8-53",
+    "enabled": true,
+    "action": "deny",
+    "duration": "until restart",
+    "operator": {
+        "type": "list",
+        "operand": "list",
+        "list": [
+            {
+                "type": "simple",
+                "operand": "dest.port",
+                "data": "53"
+            },
+            {
+                "type": "simple",
+                "operand": "dest.ip",
+                "data": "8.8.8.8"
+            }
+        ]
+    }
+}
