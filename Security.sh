@@ -15,7 +15,7 @@
     sudo rm /etc/systemd/system/multi-user.target.wants/dnscrypt-proxy*
     sudo rm /etc/firewall-start
     sudo rm /etc/macchange
-    sudo rm /etc/dnscrypt-proxy
+    sudo rm /etc/dnscrypt-proxy -R
 
     # -----------------------------------------------------------------------------------------------------------------------
 
@@ -173,10 +173,10 @@ EOF
     #sudo systemctl enable dnscrypt-proxy
     #sudo systemctl start dnscrypt-proxy
     #sudo systemctl status dnscrypt-proxy
-q
+
     printf " ${GREEN}[+] Verify DNS Service\n"${NC}
     ./dnscrypt-proxy -config /etc/dnscrypt-proxy/dnscrypt-proxy.toml -resolve google.com
-    nmtui
+    #nmtui
 
     printf " ${GREEN}[+] Tor Service\n"${NC}
     sudo apt install tor torsocks -y
