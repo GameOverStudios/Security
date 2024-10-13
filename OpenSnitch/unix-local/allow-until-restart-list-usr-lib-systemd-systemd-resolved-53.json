@@ -1,0 +1,23 @@
+{
+    "created": "2024-10-13T01:00:09.000000Z",
+    "name": "allow-until-restart-list-usr-lib-systemd-systemd-resolved-53",
+    "enabled": true,
+    "action": "allow",
+    "duration": "always",
+    "operator": {
+        "type": "list",
+        "operand": "list",
+        "list": [
+            {
+                "type": "simple",
+                "operand": "process.command",
+                "data": "/usr/lib/systemd/systemd-resolved"
+            },
+            {
+                "type": "simple",
+                "operand": "dest.port",
+                "data": "53"
+            }
+        ]
+    }
+}
