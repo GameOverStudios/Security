@@ -1,0 +1,92 @@
+import os
+import random
+import string
+from tqdm import tqdm
+import subprocess
+import sys
+
+def generate_random_name(length=4):
+    return ''.join(random.choices(string.ascii_lowercase, k=length))
+
+def get_all_files_and_dirs(directory):
+    print('Getting Files...')
+    files = []
+    dirs = []
+    for root, dirnames, filenames in os.walk(directory):
+        for filename in filenames:
+            files.append(os.path.join(root, filename))
+        for dirname in dirnames:
+            dirs.append(os.path.join(root, dirname))
+    return files, dirs
+
+def rename_and_delete_file(file):
+    try:
+        new_name = generate_random_name() + os.path.splitext(file)[1]
+        new_path = os.path.join(os.path.dirname(file), new_name)
+        os.rename(file, new_path)
+        os.remove(new_path)
+    except FileNotFoundError:
+        print(f"File not found: {file}")
+    except PermissionError:
+        print(f"Permission error: {file}")
+
+def rename_and_delete_files(files):
+    for file in tqdm(files, desc="Renaming and deleting files"):
+        rename_and_delete_file(file)
+
+def rename_and_delete_dirs(dirs):
+    for dir in tqdm(reversed(dirs), desc="Renaming and deleting directories"):
+        try:
+            new_name = generate_random_name()
+            new_path = os.path.join(os.path.dirname(dir), new_name)
+            os.rename(dir, new_path)
+            os.rmdir(new_path)
+        except FileNotFoundError:
+            print(f"Directory not found: {dir}")
+        except PermissionError:
+            print(f"Permission error: {dir}")
+        except OSError:
+            print(f"Error removing directory: {dir}")
+
+def process_directory(directory):
+    print('chmod 777')
+    subprocess.run(['chmod', '-R', '777', directory], capture_output=True, text=True)
+
+    files, dirs = get_all_files_and_dirs(directory)
+    rename_and_delete_files(files)
+    rename_and_delete_dirs(dirs)
+
+    try:
+        os.rmdir(directory)
+    except OSError:
+        print(f"Error removing directory: {directory}")
+    except PermissionError:
+        print(f"Permission error: {directory}")
+
+def process_file(file):
+    subprocess.run(['chmod', '777', file], capture_output=True, text=True)
+    rename_and_delete_file(file)
+
+if __name__ == "__main__":
+    if len(sys.argv) != 2:
+        print("Usage: python script.py <directory_or_file>")
+        sys.exit(1)
+
+    input_path = sys.argv[1]
+
+    if os.path.isdir(input_path):
+        process_directory(input_path)
+    elif os.path.isfile(input_path):
+        process_file(input_path)
+    else:
+        print(f"Error: {input_path} is not a valid file or directory")
+
+
+
+    if os.path.isdir(input_path):
+        process_directory(input_path)
+    elif os.path.isfile(input_path):
+        process_file(input_path)
+    else:
+        print(f"Error: {input_path} is not a valid file or directory")
+        sys.exit(1)

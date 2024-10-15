@@ -1,0 +1,12 @@
+{
+    "created": "2024-10-15T20:28:47.000000Z",
+    "name": "deny-always-simple-usr-sbin-chronyd",
+    "enabled": true,
+    "action": "deny",
+    "duration": "always",
+    "operator": {
+        "type": "simple",
+        "operand": "process.path",
+        "data": "/usr/sbin/chronyd"
+    }
+}

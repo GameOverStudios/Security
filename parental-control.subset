@@ -1,0 +1,48 @@
+# parental-control
+
+A set of resolvers blocking popular websites that may not be appropriate
+for children.
+
+This is not bulletproof. In particular, websites in languages that are
+not English will require additional, local rules.
+
+To use that list, add this to the `[sources]` section of your
+`dnscrypt-proxy.toml` configuration file:
+
+    [sources.'parental-control']
+    urls = ['https://raw.githubusercontent.com/DNSCrypt/dnscrypt-resolvers/master/v3/parental-control.md', 'https://download.dnscrypt.info/resolvers-list/v3/parental-control.md']
+    minisign_key = 'RWQf6LRCGA9i53mlYecO4IzT51TGPpvWucNSCh1CBM0QTaLn73Y7GFO3'
+    cache_file = 'parental-control.md'
+
+In order to enforce safe search results from Google and Youtube, you may
+also want to enable cloaking (`cloaking_rules` in the configuration file).
+
+--
+
+adguard-dns-family
+adguard-dns-family-doh
+adguard-dns-family-ipv6
+cisco-familyshield
+cisco-familyshield-ipv6
+cleanbrowsing-adult
+cleanbrowsing-adult-doh
+cleanbrowsing-adult-ipv6
+cleanbrowsing-family
+cleanbrowsing-family-doh
+cleanbrowsing-family-ipv6
+cloudflare-family
+cloudflare-family-ipv6
+dns0-kids
+dnsforfamily
+dnsforfamily-doh
+dnsforfamily-doh-no-safe-search
+dnsforfamily-no-safe-search
+dnsforfamily-v6
+dnswarden-adult-doh
+doh-cleanbrowsing-adult
+doh-cleanbrowsing-family
+puredns-family-doh
+puredns-family-doh-ipv6
+safesurfer
+sfw.scaleway-fr
+mullvad-family-doh

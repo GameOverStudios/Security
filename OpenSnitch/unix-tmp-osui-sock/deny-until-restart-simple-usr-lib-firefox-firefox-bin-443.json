@@ -1,0 +1,23 @@
+{
+    "created": "2024-10-15T20:40:12.000000Z",
+    "name": "deny-until-restart-simple-usr-lib-firefox-firefox-bin-443",
+    "enabled": true,
+    "action": "allow",
+    "duration": "always",
+    "operator": {
+        "type": "list",
+        "operand": "list",
+        "list": [
+            {
+                "type": "simple",
+                "operand": "process.path",
+                "data": "/usr/lib/firefox/firefox-bin"
+            },
+            {
+                "type": "simple",
+                "operand": "dest.port",
+                "data": "443"
+            }
+        ]
+    }
+}

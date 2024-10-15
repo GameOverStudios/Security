@@ -1,0 +1,23 @@
+{
+    "created": "2024-10-15T17:59:53.000000Z",
+    "name": "allow-always-simple-53",
+    "enabled": true,
+    "action": "deny",
+    "duration": "always",
+    "operator": {
+        "type": "list",
+        "operand": "list",
+        "list": [
+            {
+                "type": "simple",
+                "operand": "dest.port",
+                "data": "53"
+            },
+            {
+                "type": "simple",
+                "operand": "source.ip",
+                "data": "127.0.0.1"
+            }
+        ]
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "created": "2024-10-15T17:53:38.000000Z",
+    "name": "deny-until-restart-simple-123",
+    "enabled": true,
+    "action": "deny",
+    "duration": "always",
+    "operator": {
+        "type": "simple",
+        "operand": "dest.port",
+        "data": "123"
+    }
+}

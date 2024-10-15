@@ -1,0 +1,12 @@
+{
+    "created": "2024-10-15T18:20:12.000000Z",
+    "name": "deny-until-restart-simple-usr-bin-fwupdmgr",
+    "enabled": true,
+    "action": "deny",
+    "duration": "until restart",
+    "operator": {
+        "type": "simple",
+        "operand": "process.path",
+        "data": "/usr/bin/fwupdmgr"
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "created": "2024-10-10T11:24:50.000000Z",
+    "name": "allow-always-list-dnscrypt-proxy",
+    "enabled": true,
+    "action": "allow",
+    "duration": "always",
+    "operator": {
+        "type": "list",
+        "operand": "list",
+        "list": [
+            {
+                "type": "simple",
+                "operand": "process.path",
+                "data": "/home/linuxlite/linux-x86_64/dnscrypt-proxy"
+            },
+            {
+                "type": "simple",
+                "operand": "process.command",
+                "data": "./dnscrypt-proxy"
+            }
+        ]
+    }
+}

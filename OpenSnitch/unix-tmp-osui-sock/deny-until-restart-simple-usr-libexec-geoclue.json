@@ -1,0 +1,12 @@
+{
+    "created": "2024-10-13T01:00:46.000000Z",
+    "name": "deny-until-restart-simple-usr-libexec-geoclue",
+    "enabled": true,
+    "action": "deny",
+    "duration": "always",
+    "operator": {
+        "type": "simple",
+        "operand": "process.path",
+        "data": "/usr/libexec/geoclue"
+    }
+}

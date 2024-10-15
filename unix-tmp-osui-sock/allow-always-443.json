@@ -1,0 +1,12 @@
+{
+    "created": "2024-10-15T18:11:13.000000Z",
+    "name": "allow-always-443",
+    "enabled": true,
+    "action": "allow",
+    "duration": "always",
+    "operator": {
+        "type": "simple",
+        "operand": "dest.port",
+        "data": "443"
+    }
+}

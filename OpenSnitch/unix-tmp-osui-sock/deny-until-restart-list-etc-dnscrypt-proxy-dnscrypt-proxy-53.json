@@ -1,0 +1,23 @@
+{
+    "created": "2024-10-13T01:00:39.000000Z",
+    "name": "deny-until-restart-list-etc-dnscrypt-proxy-dnscrypt-proxy-53",
+    "enabled": true,
+    "action": "deny",
+    "duration": "always",
+    "operator": {
+        "type": "list",
+        "operand": "list",
+        "list": [
+            {
+                "type": "simple",
+                "operand": "process.path",
+                "data": "/etc/dnscrypt-proxy/dnscrypt-proxy"
+            },
+            {
+                "type": "simple",
+                "operand": "dest.port",
+                "data": "53"
+            }
+        ]
+    }
+}

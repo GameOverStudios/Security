@@ -1,0 +1,18 @@
+{
+    "created": "2024-10-15T17:54:33.000000Z",
+    "name": "deny-always-list-5353",
+    "enabled": true,
+    "action": "deny",
+    "duration": "always",
+    "operator": {
+        "type": "list",
+        "operand": "list",
+        "list": [
+            {
+                "type": "simple",
+                "operand": "dest.port",
+                "data": "5353"
+            }
+        ]
+    }
+}

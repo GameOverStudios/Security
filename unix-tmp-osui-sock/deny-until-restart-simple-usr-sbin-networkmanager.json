@@ -1,0 +1,12 @@
+{
+    "created": "2024-10-15T18:17:46.000000Z",
+    "name": "deny-until-restart-simple-usr-sbin-networkmanager",
+    "enabled": true,
+    "action": "allow",
+    "duration": "always",
+    "operator": {
+        "type": "simple",
+        "operand": "process.path",
+        "data": "/usr/sbin/NetworkManager"
+    }
+}

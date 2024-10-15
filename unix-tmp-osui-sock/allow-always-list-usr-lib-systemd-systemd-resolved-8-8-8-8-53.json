@@ -1,0 +1,28 @@
+{
+    "created": "2024-10-15T18:00:50.000000Z",
+    "name": "allow-always-list-usr-lib-systemd-systemd-resolved-8-8-8-8-53",
+    "enabled": true,
+    "action": "deny",
+    "duration": "always",
+    "operator": {
+        "type": "list",
+        "operand": "list",
+        "list": [
+            {
+                "type": "simple",
+                "operand": "dest.ip",
+                "data": "8.8.8.8"
+            },
+            {
+                "type": "simple",
+                "operand": "dest.port",
+                "data": "53"
+            },
+            {
+                "type": "simple",
+                "operand": "process.path",
+                "data": "/usr/lib/systemd/systemd-resolved"
+            }
+        ]
+    }
+}
