@@ -2002,3 +2002,69 @@ connected via wlo1
 + true
 + sleep 10
 [2024-10-16 15:30:00] [NOTICE] Stopped.
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
