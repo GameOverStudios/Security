@@ -2068,3 +2068,325 @@ connected via wlo1
 connected via wlo1
 + true
 + sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ ifconfig eth0
++ grep inet
+eth0: error fetching interface information: Device not found
++ echo 'not connected, macchange in effect'
+not connected, macchange in effect
++ ifconfig eth0 down
+eth0: ERROR while getting interface flags: No such device
++ ifconfig wlo1 down
++ macchanger -r eth0
+/etc/dnscrypt-proxy/macchange.sh: line 18: macchanger: command not found
++ ifconfig eth0 up
+eth0: ERROR while getting interface flags: No such device
++ macchanger -r wlo1
+/etc/dnscrypt-proxy/macchange.sh: line 22: macchanger: command not found
++ ifconfig wlo1 up
+SIOCSIFFLAGS: Operation not possible due to RF-kill
++ sleep 50
++ true
++ sleep 10
+[2024-10-16 15:55:34] [NOTICE] dnscrypt-proxy 2.1.5
+[INFO  encrypted_dns] State file [encrypted-dns.state] found; using existing provider key
+[INFO  encrypted_dns] Public server address: 198.51.100.1:443
+[INFO  encrypted_dns] Provider public key: 846d9783830ad5ac704a1653a64b69d4ec07cb2e7e4cb2041f85cb817d2710d5
+[INFO  encrypted_dns] Provider name: 2.dnscrypt-cert.secure.dns.test
+[INFO  encrypted_dns] DNS Stamp: sdns://AQcAAAAAAAAAEDE5OC41MS4xMDAuMTo0NDMghG2Xg4MK1axwShZTpktp1OwHyy5-TLIEH4XLgX0nENUfMi5kbnNjcnlwdC1jZXJ0LnNlY3VyZS5kbnMudGVzdA
+[2024-10-16 15:55:34] [NOTICE] Network connectivity detected
+[2024-10-16 15:55:34] [NOTICE] Now listening to 127.0.0.1:53 [UDP]
+[2024-10-16 15:55:34] [NOTICE] Now listening to 127.0.0.1:53 [TCP]
+[2024-10-16 15:55:34] [NOTICE] Source [public-resolvers] loaded
+[2024-10-16 15:55:34] [NOTICE] Source [relays] loaded
+[2024-10-16 15:55:34] [NOTICE] Firefox workaround initialized
+[2024-10-16 15:55:34] [NOTICE] Loading the set of blocking rules from [blocked_names.txt]
+[2024-10-16 15:55:35] [NOTICE] [ams-doh-nl] OK (DoH) - rtt: 246ms
+[2024-10-16 15:55:36] [NOTICE] [dns.sb] OK (DoH) - rtt: 203ms
+[2024-10-16 15:55:37] [NOTICE] [doh.appliedprivacy.net] OK (DoH) - rtt: 305ms
+[2024-10-16 15:55:39] [NOTICE] [njalla-doh] OK (DoH) - rtt: 304ms
+[2024-10-16 15:55:39] [NOTICE] [myserver] TIMEOUT
+[2024-10-16 15:55:41] [NOTICE] [artikel10-doh-ipv4] OK (DoH) - rtt: 306ms
+[2024-10-16 15:55:42] [NOTICE] [doh.ffmuc.net] OK (DoH) - rtt: 303ms
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
+[2024-10-16 15:55:45] [NOTICE] [quad101] OK (DoH) - rtt: 311ms
+[2024-10-16 15:55:46] [NOTICE] [nextdns-ultralow] OK (DoH) - rtt: 254ms
+[2024-10-16 15:55:47] [NOTICE] [fdn] OK (DoH) - rtt: 339ms
+[2024-10-16 15:55:48] [NOTICE] [plan9dns-fl-doh] OK (DoH) - rtt: 186ms
+[2024-10-16 15:55:48] [NOTICE] [wikimedia] OK (DoH) - rtt: 5ms
+[2024-10-16 15:55:49] [NOTICE] [bortzmeyer] OK (DoH) - rtt: 307ms
+[2024-10-16 15:55:51] [NOTICE] [mullvad-doh] OK (DoH) - rtt: 203ms
+[2024-10-16 15:55:51] [NOTICE] [cloudflare] OK (DoH) - rtt: 238ms
+[2024-10-16 15:55:52] [NOTICE] [dns.digitalsize.net] OK (DoH) - rtt: 285ms
+[2024-10-16 15:55:53] [NOTICE] [controld-uncensored] OK (DoH) - rtt: 8ms
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
+[2024-10-16 15:55:54] [NOTICE] [doh-ibksturm] OK (DoH) - rtt: 308ms
+[2024-10-16 15:55:55] [NOTICE] [jp.tiar.app-doh] OK (DoH) - rtt: 289ms
+[2024-10-16 15:55:58] [NOTICE] [dns0-unfiltered] OK (DoH) - rtt: 253ms
+[2024-10-16 15:55:59] [NOTICE] [plan9dns-mx-doh] OK (DoH) - rtt: 205ms
+[2024-10-16 15:55:59] [NOTICE] [controld-unfiltered] OK (DoH) - rtt: 5ms
+[2024-10-16 15:56:00] [NOTICE] [sth-doh-se] OK (DoH) - rtt: 333ms
+[2024-10-16 15:56:02] [NOTICE] [doh-crypto-sx] OK (DoH) - rtt: 521ms
+[2024-10-16 15:56:02] [NOTICE] [nextdns] OK (DoH) - rtt: 6ms
+[2024-10-16 15:56:03] [NOTICE] [a-and-a] OK (DoH) - rtt: 202ms
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
+[2024-10-16 15:56:14] [NOTICE] [nic.cz] OK (DoH) - rtt: 262ms
+[2024-10-16 15:56:14] [NOTICE] [adguard-dns-unfiltered-doh] OK (DoH) - rtt: 11ms
+[2024-10-16 15:56:17] [NOTICE] [jp.tiarap.org] OK (DoH) - rtt: 454ms
+[2024-10-16 15:56:18] [NOTICE] [restena-doh-ipv4] OK (DoH) - rtt: 198ms
+[2024-10-16 15:56:20] [NOTICE] [bebasdns-unfiltered-doh] OK (DoH) - rtt: 370ms
+[2024-10-16 15:56:20] [NOTICE] [dnscrypt.ca-ipv4-doh] OK (DoH) - rtt: 141ms
+[2024-10-16 15:56:21] [NOTICE] [dns.digitale-gesellschaft.ch] OK (DoH) - rtt: 206ms
+[2024-10-16 15:56:23] [NOTICE] [doh.ffmuc.net-2] OK (DoH) - rtt: 304ms
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
+[2024-10-16 15:56:24] [NOTICE] [plan9dns-nj-doh] OK (DoH) - rtt: 236ms
+[2024-10-16 15:56:24] [NOTICE] Sorted latencies:
+[2024-10-16 15:56:24] [NOTICE] -     5ms controld-unfiltered
+[2024-10-16 15:56:24] [NOTICE] -     5ms wikimedia
+[2024-10-16 15:56:24] [NOTICE] -     6ms nextdns
+[2024-10-16 15:56:24] [NOTICE] -     8ms controld-uncensored
+[2024-10-16 15:56:24] [NOTICE] -    11ms adguard-dns-unfiltered-doh
+[2024-10-16 15:56:24] [NOTICE] -   141ms dnscrypt.ca-ipv4-doh
+[2024-10-16 15:56:24] [NOTICE] -   186ms plan9dns-fl-doh
+[2024-10-16 15:56:24] [NOTICE] -   198ms restena-doh-ipv4
+[2024-10-16 15:56:24] [NOTICE] -   202ms a-and-a
+[2024-10-16 15:56:24] [NOTICE] -   203ms dns.sb
+[2024-10-16 15:56:24] [NOTICE] -   203ms mullvad-doh
+[2024-10-16 15:56:24] [NOTICE] -   205ms plan9dns-mx-doh
+[2024-10-16 15:56:24] [NOTICE] -   206ms dns.digitale-gesellschaft.ch
+[2024-10-16 15:56:24] [NOTICE] -   236ms plan9dns-nj-doh
+[2024-10-16 15:56:24] [NOTICE] -   238ms cloudflare
+[2024-10-16 15:56:24] [NOTICE] -   246ms ams-doh-nl
+[2024-10-16 15:56:24] [NOTICE] -   253ms dns0-unfiltered
+[2024-10-16 15:56:24] [NOTICE] -   254ms nextdns-ultralow
+[2024-10-16 15:56:24] [NOTICE] -   262ms nic.cz
+[2024-10-16 15:56:24] [NOTICE] -   285ms dns.digitalsize.net
+[2024-10-16 15:56:24] [NOTICE] -   289ms jp.tiar.app-doh
+[2024-10-16 15:56:24] [NOTICE] -   303ms doh.ffmuc.net
+[2024-10-16 15:56:24] [NOTICE] -   304ms njalla-doh
+[2024-10-16 15:56:24] [NOTICE] -   304ms doh.ffmuc.net-2
+[2024-10-16 15:56:24] [NOTICE] -   305ms doh.appliedprivacy.net
+[2024-10-16 15:56:24] [NOTICE] -   306ms artikel10-doh-ipv4
+[2024-10-16 15:56:24] [NOTICE] -   307ms bortzmeyer
+[2024-10-16 15:56:24] [NOTICE] -   308ms doh-ibksturm
+[2024-10-16 15:56:24] [NOTICE] -   311ms quad101
+[2024-10-16 15:56:24] [NOTICE] -   333ms sth-doh-se
+[2024-10-16 15:56:24] [NOTICE] -   339ms fdn
+[2024-10-16 15:56:24] [NOTICE] -   370ms bebasdns-unfiltered-doh
+[2024-10-16 15:56:24] [NOTICE] -   454ms jp.tiarap.org
+[2024-10-16 15:56:24] [NOTICE] -   521ms doh-crypto-sx
+[2024-10-16 15:56:24] [NOTICE] Server with the lowest initial latency: controld-unfiltered (rtt: 5ms)
+[2024-10-16 15:56:24] [NOTICE] dnscrypt-proxy is ready - live servers: 34
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
