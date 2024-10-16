@@ -1,8 +1,8 @@
 {
-    "created": "2024-10-12T22:18:12.000000Z",
-    "name": "allow-always-list-opt-google-chrome-chrome-80",
+    "created": "2024-10-16T00:55:35.000000Z",
+    "name": "deny-always-list-usr-lib-systemd-systemd-resolved-53",
     "enabled": true,
-    "action": "allow",
+    "action": "deny",
     "duration": "always",
     "operator": {
         "type": "list",
@@ -11,12 +11,12 @@
             {
                 "type": "simple",
                 "operand": "dest.port",
-                "data": "80"
+                "data": "53"
             },
             {
                 "type": "simple",
                 "operand": "process.path",
-                "data": "/opt/google/chrome/chrome"
+                "data": "/usr/lib/systemd/systemd-resolved"
             }
         ]
     }

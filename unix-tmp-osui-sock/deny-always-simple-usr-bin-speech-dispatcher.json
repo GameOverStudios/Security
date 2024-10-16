@@ -1,12 +1,12 @@
 {
-    "created": "2024-10-15T20:28:47.000000Z",
-    "name": "deny-always-simple-usr-sbin-chronyd",
+    "created": "2024-10-16T01:18:59.000000Z",
+    "name": "deny-always-simple-usr-bin-speech-dispatcher",
     "enabled": true,
     "action": "deny",
     "duration": "always",
     "operator": {
         "type": "simple",
         "operand": "process.path",
-        "data": "/usr/sbin/chronyd"
+        "data": "/usr/bin/speech-dispatcher"
     }
 }

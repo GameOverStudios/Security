@@ -1,0 +1,669 @@
+[WARN  encrypted_dns] No state file found... creating a new provider key
+[INFO  encrypted_dns] Public server address: 198.51.100.1:443
+[INFO  encrypted_dns] Provider public key: 846d9783830ad5ac704a1653a64b69d4ec07cb2e7e4cb2041f85cb817d2710d5
+[INFO  encrypted_dns] Provider name: 2.dnscrypt-cert.secure.dns.test
+[INFO  encrypted_dns] DNS Stamp: sdns://AQcAAAAAAAAAEDE5OC41MS4xMDAuMTo0NDMghG2Xg4MK1axwShZTpktp1OwHyy5-TLIEH4XLgX0nENUfMi5kbnNjcnlwdC1jZXJ0LnNlY3VyZS5kbnMudGVzdA
+[2024-10-16 00:02:36] [NOTICE] dnscrypt-proxy 2.1.5
+[2024-10-16 00:02:36] [NOTICE] Network connectivity detected
+[2024-10-16 00:02:36] [NOTICE] Now listening to 127.0.0.1:53 [UDP]
+[2024-10-16 00:02:36] [NOTICE] Now listening to 127.0.0.1:53 [TCP]
+[2024-10-16 00:02:36] [NOTICE] Source [public-resolvers] loaded
+[2024-10-16 00:02:36] [NOTICE] Source [relays] loaded
+[2024-10-16 00:02:36] [NOTICE] Firefox workaround initialized
+[2024-10-16 00:02:36] [NOTICE] Loading the set of blocking rules from [blocked_names.txt]
+[2024-10-16 00:02:48] [NOTICE] [controld-unfiltered] OK (DoH) - rtt: 6ms
+[2024-10-16 00:02:48] [NOTICE] [plan9dns-mx-doh] OK (DoH) - rtt: 203ms
+[2024-10-16 00:02:52] [NOTICE] Resolving server host [dns.twnic.tw] using bootstrap resolvers over udp
+[2024-10-16 00:02:56] [NOTICE] Resolving server host [dns.twnic.tw] using bootstrap resolvers over tcp
+[2024-10-16 00:03:00] [NOTICE] Bootstrap resolvers didn't respond - Trying with the system resolver as a last resort
+[2024-10-16 00:03:31] [ERROR] Unable to resolve [dns.twnic.tw] - Make sure that the system resolver works, or that `bootstrap_resolvers` has been set to resolvers that can be reached
+[2024-10-16 00:03:35] [NOTICE] Resolving server host [dns.twnic.tw] using bootstrap resolvers over udp
+[2024-10-16 00:03:39] [NOTICE] Resolving server host [dns.twnic.tw] using bootstrap resolvers over tcp
+[2024-10-16 00:03:43] [NOTICE] Bootstrap resolvers didn't respond - Trying with the system resolver as a last resort
+[2024-10-16 00:04:13] [ERROR] Unable to resolve [dns.twnic.tw] - Make sure that the system resolver works, or that `bootstrap_resolvers` has been set to resolvers that can be reached
+[2024-10-16 00:04:17] [NOTICE] Resolving server host [open.dns0.eu] using bootstrap resolvers over udp
+[2024-10-16 00:04:21] [NOTICE] Resolving server host [open.dns0.eu] using bootstrap resolvers over tcp
+[2024-10-16 00:04:25] [NOTICE] Bootstrap resolvers didn't respond - Trying with the system resolver as a last resort
+[2024-10-16 00:04:55] [ERROR] Unable to resolve [open.dns0.eu] - Make sure that the system resolver works, or that `bootstrap_resolvers` has been set to resolvers that can be reached
+[2024-10-16 00:04:59] [NOTICE] Resolving server host [open.dns0.eu] using bootstrap resolvers over udp
+[2024-10-16 00:05:03] [NOTICE] Resolving server host [open.dns0.eu] using bootstrap resolvers over tcp
+[2024-10-16 00:05:07] [NOTICE] Bootstrap resolvers didn't respond - Trying with the system resolver as a last resort
+[2024-10-16 00:05:37] [ERROR] Unable to resolve [open.dns0.eu] - Make sure that the system resolver works, or that `bootstrap_resolvers` has been set to resolvers that can be reached
+[2024-10-16 00:05:38] [NOTICE] [a-and-a] OK (DoH) - rtt: 203ms
+[2024-10-16 00:05:40] [NOTICE] [doh.ffmuc.net-2] OK (DoH) - rtt: 308ms
+[2024-10-16 00:05:40] [NOTICE] [nextdns] OK (DoH) - rtt: 4ms
+[2024-10-16 00:05:44] [NOTICE] Resolving server host [jp.tiarap.org] using bootstrap resolvers over udp
+[2024-10-16 00:05:48] [NOTICE] Resolving server host [jp.tiarap.org] using bootstrap resolvers over tcp
+[2024-10-16 00:05:52] [NOTICE] Bootstrap resolvers didn't respond - Trying with the system resolver as a last resort
+[2024-10-16 00:06:22] [ERROR] Unable to resolve [jp.tiarap.org] - Make sure that the system resolver works, or that `bootstrap_resolvers` has been set to resolvers that can be reached
+[2024-10-16 00:06:26] [NOTICE] Resolving server host [jp.tiarap.org] using bootstrap resolvers over udp
+[2024-10-16 00:06:30] [NOTICE] Resolving server host [jp.tiarap.org] using bootstrap resolvers over tcp
+[2024-10-16 00:06:34] [NOTICE] Bootstrap resolvers didn't respond - Trying with the system resolver as a last resort
+[2024-10-16 00:07:04] [ERROR] Unable to resolve [jp.tiarap.org] - Make sure that the system resolver works, or that `bootstrap_resolvers` has been set to resolvers that can be reached
+[2024-10-16 00:07:05] [NOTICE] [nic.cz] OK (DoH) - rtt: 304ms
+[2024-10-16 00:07:06] [NOTICE] [artikel10-doh-ipv4] OK (DoH) - rtt: 227ms
+[2024-10-16 00:07:08] [NOTICE] [bebasdns-unfiltered-doh] OK (DoH) - rtt: 407ms
+[2024-10-16 00:07:21] [NOTICE] [restena-doh-ipv4] OK (DoH) - rtt: 307ms
+[2024-10-16 00:07:21] [NOTICE] [wikimedia] OK (DoH) - rtt: 7ms
+[2024-10-16 00:07:23] [NOTICE] [sth-doh-se] OK (DoH) - rtt: 304ms
+[2024-10-16 00:07:24] [NOTICE] [dnscrypt.ca-ipv4-doh] OK (DoH) - rtt: 204ms
+[2024-10-16 00:07:25] [NOTICE] [mullvad-doh] OK (DoH) - rtt: 204ms
+[2024-10-16 00:07:26] [NOTICE] [dns.digitalsize.net] OK (DoH) - rtt: 307ms
+[2024-10-16 00:07:27] [NOTICE] [fdn] OK (DoH) - rtt: 308ms
+[2024-10-16 00:07:28] [NOTICE] [bortzmeyer] OK (DoH) - rtt: 203ms
+[2024-10-16 00:07:29] [NOTICE] [dns.digitale-gesellschaft.ch] OK (DoH) - rtt: 307ms
+[2024-10-16 00:07:30] [NOTICE] [plan9dns-fl-doh] OK (DoH) - rtt: 121ms
+[2024-10-16 00:07:32] [NOTICE] [doh-crypto-sx] OK (DoH) - rtt: 614ms
+[2024-10-16 00:07:34] [NOTICE] [doh.ffmuc.net] OK (DoH) - rtt: 305ms
+[2024-10-16 00:07:38] [NOTICE] Resolving server host [doh.appliedprivacy.net] using bootstrap resolvers over udp
+[2024-10-16 00:07:42] [NOTICE] Resolving server host [doh.appliedprivacy.net] using bootstrap resolvers over tcp
+[2024-10-16 00:07:46] [NOTICE] Bootstrap resolvers didn't respond - Trying with the system resolver as a last resort
+[2024-10-16 00:08:16] [ERROR] Unable to resolve [doh.appliedprivacy.net] - Make sure that the system resolver works, or that `bootstrap_resolvers` has been set to resolvers that can be reached
+[2024-10-16 00:08:20] [NOTICE] Resolving server host [doh.appliedprivacy.net] using bootstrap resolvers over udp
+[2024-10-16 00:08:24] [NOTICE] Resolving server host [doh.appliedprivacy.net] using bootstrap resolvers over tcp
+[2024-10-16 00:08:28] [NOTICE] Bootstrap resolvers didn't respond - Trying with the system resolver as a last resort
+[2024-10-16 00:08:58] [ERROR] Unable to resolve [doh.appliedprivacy.net] - Make sure that the system resolver works, or that `bootstrap_resolvers` has been set to resolvers that can be reached
+[2024-10-16 00:08:59] [NOTICE] [plan9dns-nj-doh] OK (DoH) - rtt: 212ms
+[2024-10-16 00:09:00] [NOTICE] [cloudflare] OK (DoH) - rtt: 234ms
+[2024-10-16 00:09:01] [NOTICE] [doh-ibksturm] OK (DoH) - rtt: 303ms
+[2024-10-16 00:09:02] [NOTICE] [ams-doh-nl] OK (DoH) - rtt: 203ms
+[2024-10-16 00:09:04] [NOTICE] [njalla-doh] OK (DoH) - rtt: 306ms
+[2024-10-16 00:09:05] [NOTICE] [dns.sb] OK (DoH) - rtt: 206ms
+[2024-10-16 00:09:05] [NOTICE] [adguard-dns-unfiltered-doh] OK (DoH) - rtt: 85ms
+[2024-10-16 00:09:09] [NOTICE] Resolving server host [dns.nextdns.io] using bootstrap resolvers over udp
+[2024-10-16 00:09:13] [NOTICE] Resolving server host [dns.nextdns.io] using bootstrap resolvers over tcp
+[2024-10-16 00:09:17] [NOTICE] Bootstrap resolvers didn't respond - Trying with the system resolver as a last resort
+[2024-10-16 00:09:47] [ERROR] Unable to resolve [dns.nextdns.io] - Make sure that the system resolver works, or that `bootstrap_resolvers` has been set to resolvers that can be reached
+[2024-10-16 00:09:51] [NOTICE] Resolving server host [dns.nextdns.io] using bootstrap resolvers over udp
+[2024-10-16 00:09:55] [NOTICE] Resolving server host [dns.nextdns.io] using bootstrap resolvers over tcp
+[2024-10-16 00:09:59] [NOTICE] Bootstrap resolvers didn't respond - Trying with the system resolver as a last resort
+[2024-10-16 00:10:29] [ERROR] Unable to resolve [dns.nextdns.io] - Make sure that the system resolver works, or that `bootstrap_resolvers` has been set to resolvers that can be reached
+[2024-10-16 00:10:35] [NOTICE] [myserver] TIMEOUT
+[2024-10-16 00:10:36] [NOTICE] [jp.tiar.app-doh] OK (DoH) - rtt: 306ms
+[2024-10-16 00:10:36] [NOTICE] Sorted latencies:
+[2024-10-16 00:10:36] [NOTICE] -     4ms nextdns
+[2024-10-16 00:10:36] [NOTICE] -     6ms controld-unfiltered
+[2024-10-16 00:10:36] [NOTICE] -     7ms wikimedia
+[2024-10-16 00:10:36] [NOTICE] -    85ms adguard-dns-unfiltered-doh
+[2024-10-16 00:10:36] [NOTICE] -   121ms plan9dns-fl-doh
+[2024-10-16 00:10:36] [NOTICE] -   203ms plan9dns-mx-doh
+[2024-10-16 00:10:36] [NOTICE] -   203ms a-and-a
+[2024-10-16 00:10:36] [NOTICE] -   203ms bortzmeyer
+[2024-10-16 00:10:36] [NOTICE] -   203ms ams-doh-nl
+[2024-10-16 00:10:36] [NOTICE] -   204ms dnscrypt.ca-ipv4-doh
+[2024-10-16 00:10:36] [NOTICE] -   204ms mullvad-doh
+[2024-10-16 00:10:36] [NOTICE] -   206ms dns.sb
+[2024-10-16 00:10:36] [NOTICE] -   212ms plan9dns-nj-doh
+[2024-10-16 00:10:36] [NOTICE] -   227ms artikel10-doh-ipv4
+[2024-10-16 00:10:36] [NOTICE] -   234ms cloudflare
+[2024-10-16 00:10:36] [NOTICE] -   303ms doh-ibksturm
+[2024-10-16 00:10:36] [NOTICE] -   304ms nic.cz
+[2024-10-16 00:10:36] [NOTICE] -   304ms sth-doh-se
+[2024-10-16 00:10:36] [NOTICE] -   305ms doh.ffmuc.net
+[2024-10-16 00:10:36] [NOTICE] -   306ms njalla-doh
+[2024-10-16 00:10:36] [NOTICE] -   306ms jp.tiar.app-doh
+[2024-10-16 00:10:36] [NOTICE] -   307ms restena-doh-ipv4
+[2024-10-16 00:10:36] [NOTICE] -   307ms dns.digitalsize.net
+[2024-10-16 00:10:36] [NOTICE] -   307ms dns.digitale-gesellschaft.ch
+[2024-10-16 00:10:36] [NOTICE] -   308ms doh.ffmuc.net-2
+[2024-10-16 00:10:36] [NOTICE] -   308ms fdn
+[2024-10-16 00:10:36] [NOTICE] -   407ms bebasdns-unfiltered-doh
+[2024-10-16 00:10:36] [NOTICE] -   614ms doh-crypto-sx
+[2024-10-16 00:10:36] [NOTICE] Server with the lowest initial latency: nextdns (rtt: 4ms)
+[2024-10-16 00:10:36] [NOTICE] dnscrypt-proxy is ready - live servers: 28
+[2024-10-16 00:30:26] [NOTICE] Stopped.
++ true
++ sleep 10
+[INFO  encrypted_dns] State file [encrypted-dns.state] found; using existing provider key
+[INFO  encrypted_dns] Public server address: 198.51.100.1:443
+[INFO  encrypted_dns] Provider public key: 846d9783830ad5ac704a1653a64b69d4ec07cb2e7e4cb2041f85cb817d2710d5
+[INFO  encrypted_dns] Provider name: 2.dnscrypt-cert.secure.dns.test
+[INFO  encrypted_dns] DNS Stamp: sdns://AQcAAAAAAAAAEDE5OC41MS4xMDAuMTo0NDMghG2Xg4MK1axwShZTpktp1OwHyy5-TLIEH4XLgX0nENUfMi5kbnNjcnlwdC1jZXJ0LnNlY3VyZS5kbnMudGVzdA
+[2024-10-16 01:12:03] [NOTICE] dnscrypt-proxy 2.1.5
+[2024-10-16 01:12:03] [NOTICE] Network connectivity detected
+[2024-10-16 01:12:03] [NOTICE] Now listening to 127.0.0.1:53 [UDP]
+[2024-10-16 01:12:03] [NOTICE] Now listening to 127.0.0.1:53 [TCP]
+[2024-10-16 01:12:03] [NOTICE] Source [relays] loaded
+[2024-10-16 01:12:03] [NOTICE] Source [public-resolvers] loaded
+[2024-10-16 01:12:03] [NOTICE] Firefox workaround initialized
+[2024-10-16 01:12:03] [NOTICE] Loading the set of blocking rules from [blocked_names.txt]
+[2024-10-16 01:12:08] [NOTICE] [myserver] TIMEOUT
+[2024-10-16 01:12:08] [NOTICE] [adguard-dns-unfiltered-doh] OK (DoH) - rtt: 11ms
+[2024-10-16 01:12:09] [NOTICE] [restena-doh-ipv4] OK (DoH) - rtt: 234ms
+[2024-10-16 01:12:10] [NOTICE] [dnscrypt.ca-ipv4-doh] OK (DoH) - rtt: 203ms
+[2024-10-16 01:12:10] [NOTICE] [controld-uncensored] OK (DoH) - rtt: 6ms
+[2024-10-16 01:12:11] [NOTICE] [dns.sb] OK (DoH) - rtt: 204ms
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
+[2024-10-16 01:12:13] [NOTICE] [jp.tiarap.org] OK (DoH) - rtt: 612ms
+[2024-10-16 01:12:14] [NOTICE] [sth-doh-se] OK (DoH) - rtt: 225ms
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
+[2024-10-16 01:12:25] [NOTICE] [plan9dns-mx-doh] OK (DoH) - rtt: 204ms
+[2024-10-16 01:12:25] [NOTICE] [cloudflare] OK (DoH) - rtt: 117ms
+[2024-10-16 01:12:26] [NOTICE] [doh-crypto-sx] OK (DoH) - rtt: 219ms
+[2024-10-16 01:12:27] [NOTICE] [a-and-a] OK (DoH) - rtt: 184ms
+[2024-10-16 01:12:28] [NOTICE] [ams-doh-nl] OK (DoH) - rtt: 187ms
+[2024-10-16 01:12:30] [NOTICE] [doh-ibksturm] OK (DoH) - rtt: 1149ms
+[2024-10-16 01:12:31] [NOTICE] [nic.cz] OK (DoH) - rtt: 220ms
+[2024-10-16 01:12:32] [NOTICE] [dns.digitalsize.net] OK (DoH) - rtt: 209ms
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
+[2024-10-16 01:12:34] [NOTICE] [doh.appliedprivacy.net] OK (DoH) - rtt: 212ms
+[2024-10-16 01:12:35] [NOTICE] [jp.tiar.app-doh] OK (DoH) - rtt: 296ms
+[2024-10-16 01:12:35] [NOTICE] [nextdns-ultralow] OK (DoH) - rtt: 4ms
+[2024-10-16 01:12:35] [NOTICE] [plan9dns-nj-doh] OK (DoH) - rtt: 114ms
+[2024-10-16 01:12:36] [NOTICE] [bortzmeyer] OK (DoH) - rtt: 193ms
+[2024-10-16 01:12:36] [NOTICE] [wikimedia] OK (DoH) - rtt: 4ms
+[2024-10-16 01:12:37] [NOTICE] [mullvad-doh] OK (DoH) - rtt: 113ms
+[2024-10-16 01:12:37] [NOTICE] [nextdns] OK (DoH) - rtt: 4ms
+[2024-10-16 01:12:38] [NOTICE] [quad101] OK (DoH) - rtt: 309ms
+[2024-10-16 01:12:40] [NOTICE] [bebasdns-unfiltered-doh] OK (DoH) - rtt: 576ms
+[2024-10-16 01:12:42] [NOTICE] [doh.ffmuc.net-2] OK (DoH) - rtt: 219ms
+[2024-10-16 01:12:42] [NOTICE] [plan9dns-fl-doh] OK (DoH) - rtt: 109ms
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
+[2024-10-16 01:12:43] [NOTICE] [doh.ffmuc.net] OK (DoH) - rtt: 256ms
+[2024-10-16 01:12:44] [NOTICE] [dns0-unfiltered] OK (DoH) - rtt: 243ms
+[2024-10-16 01:12:45] [NOTICE] [dns.digitale-gesellschaft.ch] OK (DoH) - rtt: 199ms
+[2024-10-16 01:12:45] [NOTICE] [controld-unfiltered] OK (DoH) - rtt: 5ms
+[2024-10-16 01:12:46] [NOTICE] [njalla-doh] OK (DoH) - rtt: 214ms
+[2024-10-16 01:12:47] [NOTICE] [artikel10-doh-ipv4] OK (DoH) - rtt: 201ms
+[2024-10-16 01:12:48] [NOTICE] [fdn] OK (DoH) - rtt: 194ms
+[2024-10-16 01:12:48] [NOTICE] Sorted latencies:
+[2024-10-16 01:12:48] [NOTICE] -     4ms nextdns-ultralow
+[2024-10-16 01:12:48] [NOTICE] -     4ms wikimedia
+[2024-10-16 01:12:48] [NOTICE] -     4ms nextdns
+[2024-10-16 01:12:48] [NOTICE] -     5ms controld-unfiltered
+[2024-10-16 01:12:48] [NOTICE] -     6ms controld-uncensored
+[2024-10-16 01:12:48] [NOTICE] -    11ms adguard-dns-unfiltered-doh
+[2024-10-16 01:12:48] [NOTICE] -   109ms plan9dns-fl-doh
+[2024-10-16 01:12:48] [NOTICE] -   113ms mullvad-doh
+[2024-10-16 01:12:48] [NOTICE] -   114ms plan9dns-nj-doh
+[2024-10-16 01:12:48] [NOTICE] -   117ms cloudflare
+[2024-10-16 01:12:48] [NOTICE] -   184ms a-and-a
+[2024-10-16 01:12:48] [NOTICE] -   187ms ams-doh-nl
+[2024-10-16 01:12:48] [NOTICE] -   193ms bortzmeyer
+[2024-10-16 01:12:48] [NOTICE] -   194ms fdn
+[2024-10-16 01:12:48] [NOTICE] -   199ms dns.digitale-gesellschaft.ch
+[2024-10-16 01:12:48] [NOTICE] -   201ms artikel10-doh-ipv4
+[2024-10-16 01:12:48] [NOTICE] -   203ms dnscrypt.ca-ipv4-doh
+[2024-10-16 01:12:48] [NOTICE] -   204ms plan9dns-mx-doh
+[2024-10-16 01:12:48] [NOTICE] -   204ms dns.sb
+[2024-10-16 01:12:48] [NOTICE] -   209ms dns.digitalsize.net
+[2024-10-16 01:12:48] [NOTICE] -   212ms doh.appliedprivacy.net
+[2024-10-16 01:12:48] [NOTICE] -   214ms njalla-doh
+[2024-10-16 01:12:48] [NOTICE] -   219ms doh-crypto-sx
+[2024-10-16 01:12:48] [NOTICE] -   219ms doh.ffmuc.net-2
+[2024-10-16 01:12:48] [NOTICE] -   220ms nic.cz
+[2024-10-16 01:12:48] [NOTICE] -   225ms sth-doh-se
+[2024-10-16 01:12:48] [NOTICE] -   234ms restena-doh-ipv4
+[2024-10-16 01:12:48] [NOTICE] -   243ms dns0-unfiltered
+[2024-10-16 01:12:48] [NOTICE] -   256ms doh.ffmuc.net
+[2024-10-16 01:12:48] [NOTICE] -   296ms jp.tiar.app-doh
+[2024-10-16 01:12:48] [NOTICE] -   309ms quad101
+[2024-10-16 01:12:48] [NOTICE] -   576ms bebasdns-unfiltered-doh
+[2024-10-16 01:12:48] [NOTICE] -   612ms jp.tiarap.org
+[2024-10-16 01:12:48] [NOTICE] -  1149ms doh-ibksturm
+[2024-10-16 01:12:48] [NOTICE] Server with the lowest initial latency: nextdns-ultralow (rtt: 4ms)
+[2024-10-16 01:12:48] [NOTICE] dnscrypt-proxy is ready - live servers: 34
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10

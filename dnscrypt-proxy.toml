@@ -94,7 +94,7 @@ disabled_server_names = []
 ## (dnscrypt-proxy will always encrypt everything even using UDP), and can
 ## only increase latency.
 
-force_tcp = true
+force_tcp = false
 
 
 ## Enable *experimental* support for HTTP/3 (DoH3, HTTP over QUIC)
@@ -114,7 +114,7 @@ http3 = false
 ## HTTP/HTTPS proxy
 ## Only for DoH servers
 
-# http_proxy = 'http://127.0.0.1:8888'
+#http_proxy = 'http://127.0.0.1:8888'
 
 
 ## How long a DNS query will wait for a response, in milliseconds.
@@ -261,7 +261,7 @@ cert_refresh_delay = 240
 ## not be sent there. If you're using DNSCrypt or Anonymized DNS and your
 ## lists are up to date, these resolvers will not even be used.
 
-bootstrap_resolvers = ['9.9.9.11:53', '8.8.8.8:53']
+bootstrap_resolvers = ['8.8.8.8:53', '8.8.8.8:53']
 
 
 ## When internal DNS resolution is required, for example to retrieve

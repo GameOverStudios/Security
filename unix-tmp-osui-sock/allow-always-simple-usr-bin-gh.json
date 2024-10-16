@@ -1,12 +1,12 @@
 {
-    "created": "2024-10-13T02:24:51.000000Z",
-    "name": "allow-until-restart-simple-usr-bin-wget",
+    "created": "2024-10-16T01:15:46.000000Z",
+    "name": "allow-always-simple-usr-bin-gh",
     "enabled": true,
     "action": "allow",
     "duration": "always",
     "operator": {
         "type": "simple",
         "operand": "process.path",
-        "data": "/usr/bin/wget"
+        "data": "/usr/bin/gh"
     }
 }

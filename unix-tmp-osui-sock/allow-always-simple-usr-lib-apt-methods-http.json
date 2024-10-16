@@ -1,12 +1,12 @@
 {
-    "created": "2024-10-10T14:55:32.000000Z",
-    "name": "allow-always-simple-usr-bin-tor",
+    "created": "2024-10-16T00:56:59.000000Z",
+    "name": "allow-always-simple-usr-lib-apt-methods-http",
     "enabled": true,
     "action": "allow",
     "duration": "always",
     "operator": {
         "type": "simple",
         "operand": "process.path",
-        "data": "/usr/bin/tor"
+        "data": "/usr/lib/apt/methods/http"
     }
 }

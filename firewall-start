@@ -96,15 +96,15 @@ $IP4TABLES -A INPUT -p tcp --destination-port auth -j REJECT --reject-with tcp-r
 #   or:
 #    DNS_PROTOCOL=(tcp)
 
-DNS_IP=(127.0.0.1 127.0.2.1)
-DNS_PROTOCOL=(udp)
+DNS_IP=(127.0.0.1 127.0.2.1 8.8.8.8)
+DNS_PROTOCOL=(tcp udp)
 
 for IP in ${DNS_IP[@]}; do
     for PROTOCOL in ${DNS_PROTOCOL[@]}; do
         $IP4TABLES -A INPUT  -p $PROTOCOL -s $IP --sport 443 -m state --state ESTABLISHED,RELATED -j ACCEPT
         $IP4TABLES -A OUTPUT -p $PROTOCOL -d $IP --dport 443 -m state --state NEW,ESTABLISHED,RELATED -j ACCEPT
-       # $IP4TABLES -A INPUT  -p $PROTOCOL -s $IP --sport 53 -m state --state ESTABLISHED,RELATED -j ACCEPT
-       # $IP4TABLES -A OUTPUT -p $PROTOCOL -d $IP --dport 53 -m state --state NEW,ESTABLISHED,RELATED -j ACCEPT
+        $IP4TABLES -A INPUT  -p $PROTOCOL -s $IP --sport 53 -m state --state ESTABLISHED,RELATED -j ACCEPT
+        $IP4TABLES -A OUTPUT -p $PROTOCOL -d $IP --dport 53 -m state --state NEW,ESTABLISHED,RELATED -j ACCEPT
     done
 done
 
@@ -126,7 +126,7 @@ done
 #
 # The full list is available in /etc/services
 
-ALLOWED_REMOTE_UDP_SERVICES=()
+ALLOWED_REMOTE_UDP_SERVICES=(8888)
 
 for SERVICE in ${ALLOWED_REMOTE_UDP_SERVICES[@]}; do
     $IP4TABLES -A INPUT  -p udp --sport $SERVICE -m state --state ESTABLISHED,RELATED -j ACCEPT
@@ -167,7 +167,7 @@ done
 #
 # The full list is available in /etc/services
 
-ALLOWED_REMOTE_TCP_SERVICES=(80 443)
+ALLOWED_REMOTE_TCP_SERVICES=(80 443 8888)
 
 for SERVICE in ${ALLOWED_REMOTE_TCP_SERVICES[@]}; do
     $IP4TABLES -A INPUT  -p tcp --sport $SERVICE -m state --state ESTABLISHED,RELATED -j ACCEPT
@@ -195,7 +195,7 @@ done
 #    ALLOWED_LOCAL_TCP_SERVICES=()
 
 TRUSTED_IP=()
-ALLOWED_LOCAL_TCP_SERVICES=()
+ALLOWED_LOCAL_TCP_SERVICES=(8888)
 
 for IP in ${TRUSTED_IP[@]}; do
     for SERVICE in ${ALLOWED_LOCAL_TCP_SERVICES[@]}; do

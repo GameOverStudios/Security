@@ -1,8 +1,8 @@
 {
-    "created": "2024-10-12T11:49:15.000000Z",
-    "name": "allow-always-list-127-0-0-53-53",
+    "created": "2024-10-16T00:55:54.000000Z",
+    "name": "deny-always-list-usr-sbin-networkmanager-53",
     "enabled": true,
-    "action": "allow",
+    "action": "deny",
     "duration": "always",
     "operator": {
         "type": "list",
@@ -15,8 +15,8 @@
             },
             {
                 "type": "simple",
-                "operand": "dest.ip",
-                "data": "127.0.0.53"
+                "operand": "process.path",
+                "data": "/usr/sbin/NetworkManager"
             }
         ]
     }
