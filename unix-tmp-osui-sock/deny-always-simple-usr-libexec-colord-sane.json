@@ -1,12 +1,12 @@
 {
-    "created": "2024-10-16T12:15:14.000000Z",
-    "name": "deny-always-simple-usr-bin-fwupdmgr",
+    "created": "2024-10-16T16:30:54.000000Z",
+    "name": "deny-always-simple-usr-libexec-colord-sane",
     "enabled": true,
     "action": "deny",
     "duration": "always",
     "operator": {
         "type": "simple",
         "operand": "process.path",
-        "data": "/usr/bin/fwupdmgr"
+        "data": "/usr/libexec/colord-sane"
     }
 }

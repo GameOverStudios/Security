@@ -1,8 +1,8 @@
 {
-    "created": "2024-10-16T15:10:39.000000Z",
+    "created": "2024-10-16T15:52:38.000000Z",
     "name": "allow-always-list-usr-sbin-networkmanager-53",
     "enabled": true,
-    "action": "allow",
+    "action": "deny",
     "duration": "always",
     "operator": {
         "type": "list",

@@ -1,0 +1,12 @@
+{
+    "created": "2024-10-16T19:12:54.000000Z",
+    "name": "deny-always-simple-usr-share-code-chrome-crashpad-handler",
+    "enabled": true,
+    "action": "deny",
+    "duration": "always",
+    "operator": {
+        "type": "simple",
+        "operand": "process.path",
+        "data": "/usr/share/code/chrome_crashpad_handler"
+    }
+}

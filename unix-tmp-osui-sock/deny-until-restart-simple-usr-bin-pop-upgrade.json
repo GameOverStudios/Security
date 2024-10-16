@@ -1,12 +1,12 @@
 {
-    "created": "2024-10-16T12:17:04.000000Z",
-    "name": "allow-always-simple-usr-bin-git",
+    "created": "2024-10-16T15:49:48.000000Z",
+    "name": "deny-until-restart-simple-usr-bin-pop-upgrade",
     "enabled": true,
     "action": "allow",
     "duration": "always",
     "operator": {
         "type": "simple",
         "operand": "process.path",
-        "data": "/usr/bin/git"
+        "data": "/usr/bin/pop-upgrade"
     }
 }

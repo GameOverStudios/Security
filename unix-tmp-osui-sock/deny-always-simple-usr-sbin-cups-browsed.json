@@ -1,12 +1,12 @@
 {
-    "created": "2024-10-16T12:15:14.000000Z",
-    "name": "deny-always-simple-usr-bin-fwupdmgr",
+    "created": "2024-10-16T15:35:59.000000Z",
+    "name": "deny-always-simple-usr-sbin-cups-browsed",
     "enabled": true,
     "action": "deny",
     "duration": "always",
     "operator": {
         "type": "simple",
         "operand": "process.path",
-        "data": "/usr/bin/fwupdmgr"
+        "data": "/usr/sbin/cups-browsed"
     }
 }

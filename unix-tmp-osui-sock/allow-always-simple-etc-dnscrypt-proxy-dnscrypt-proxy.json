@@ -1,0 +1,12 @@
+{
+    "created": "2024-10-16T15:36:59.000000Z",
+    "name": "allow-always-simple-etc-dnscrypt-proxy-dnscrypt-proxy",
+    "enabled": true,
+    "action": "allow",
+    "duration": "always",
+    "operator": {
+        "type": "simple",
+        "operand": "process.path",
+        "data": "/etc/dnscrypt-proxy/dnscrypt-proxy"
+    }
+}

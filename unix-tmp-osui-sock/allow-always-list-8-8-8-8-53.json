@@ -1,8 +1,8 @@
 {
-    "created": "2024-10-16T15:08:16.000000Z",
+    "created": "2024-10-16T15:38:03.000000Z",
     "name": "allow-always-list-8-8-8-8-53",
     "enabled": true,
-    "action": "reject",
+    "action": "deny",
     "duration": "always",
     "operator": {
         "type": "list",
