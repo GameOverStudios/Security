@@ -1901,3 +1901,79 @@ connected via wlo1
 connected via wlo1
 + true
 + sleep 10
++ true
++ sleep 10
+[INFO  encrypted_dns] State file [encrypted-dns.state] found; using existing provider key
+[INFO  encrypted_dns] Public server address: 198.51.100.1:443
+[INFO  encrypted_dns] Provider public key: 846d9783830ad5ac704a1653a64b69d4ec07cb2e7e4cb2041f85cb817d2710d5
+[INFO  encrypted_dns] Provider name: 2.dnscrypt-cert.secure.dns.test
+[INFO  encrypted_dns] DNS Stamp: sdns://AQcAAAAAAAAAEDE5OC41MS4xMDAuMTo0NDMghG2Xg4MK1axwShZTpktp1OwHyy5-TLIEH4XLgX0nENUfMi5kbnNjcnlwdC1jZXJ0LnNlY3VyZS5kbnMudGVzdA
+[2024-10-16 15:25:56] [NOTICE] dnscrypt-proxy 2.1.5
+[2024-10-16 15:25:56] [NOTICE] Network connectivity detected
+[2024-10-16 15:25:56] [NOTICE] Now listening to 127.0.0.1:53 [UDP]
+[2024-10-16 15:25:56] [NOTICE] Now listening to 127.0.0.1:53 [TCP]
+[2024-10-16 15:25:56] [NOTICE] Source [relays] loaded
+[2024-10-16 15:25:56] [NOTICE] Source [public-resolvers] loaded
+[2024-10-16 15:25:56] [NOTICE] Firefox workaround initialized
+[2024-10-16 15:25:56] [NOTICE] Loading the set of blocking rules from [blocked_names.txt]
+[2024-10-16 15:25:58] [NOTICE] [doh.ffmuc.net-2] OK (DoH) - rtt: 306ms
+[ERROR encrypted_dns] Unable to listen to the requested IPs and ports: [Address already in use (os error 98)]
++ true
++ sleep 10
+[2024-10-16 15:27:26] [NOTICE] dnscrypt-proxy 2.1.5
+[2024-10-16 15:27:26] [NOTICE] Network connectivity detected
+[2024-10-16 15:27:26] [FATAL] listen udp 127.0.0.1:53: bind: address already in use
+[ERROR encrypted_dns] Unable to listen to the requested IPs and ports: [Address already in use (os error 98)]
++ true
++ sleep 10
+[2024-10-16 15:28:01] [NOTICE] dnscrypt-proxy 2.1.5
+[2024-10-16 15:28:01] [NOTICE] Network connectivity detected
+[2024-10-16 15:28:01] [FATAL] listen udp 127.0.0.1:53: bind: address already in use
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ true
++ sleep 10
+[ERROR encrypted_dns] Unable to listen to the requested IPs and ports: [Address already in use (os error 98)]
+[2024-10-16 15:28:15] [NOTICE] dnscrypt-proxy 2.1.5
+[2024-10-16 15:28:16] [NOTICE] Network connectivity detected
+[2024-10-16 15:28:16] [FATAL] listen udp 127.0.0.1:53: bind: address already in use
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ true
++ sleep 10
+[ERROR encrypted_dns] Unable to listen to the requested IPs and ports: [Address already in use (os error 98)]
+[2024-10-16 15:28:45] [NOTICE] dnscrypt-proxy 2.1.5
+[2024-10-16 15:28:45] [NOTICE] Network connectivity detected
+[2024-10-16 15:28:45] [FATAL] listen udp 127.0.0.1:53: bind: address already in use
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10

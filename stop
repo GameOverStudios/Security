@@ -1,0 +1,6 @@
+
+
+
+pkill dnscrypt-proxy
+pkill encrypted-dns
+pkill macchange

@@ -1,5 +1,11 @@
 #!/bin/bash
 
+echo alias net='/etc/dnscrypt-proxy/start' >> /root/.bashrc
+echo alias unet='/etc/dnscrypt-proxy/stop' >> /root/.bashrc
+
+echo alias net='/etc/dnscrypt-proxy/start' >> /home/pop-os/.bashrc
+echo alias unet='/etc/dnscrypt-proxy/stop' >> /home/pop-os/.bashrc
+
 echo "nameserver 8.8.8.8" > /etc/resolv.conf
 ./firewall-start
 iptables -L
