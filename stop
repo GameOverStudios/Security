@@ -1,5 +1,6 @@
 
-
+systemctl disable NetworkManager
+systemctl stop NetworkManager
 
 pkill dnscrypt-proxy
 pkill encrypted-dns

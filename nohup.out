@@ -2167,57 +2167,369 @@ SIOCSIFFLAGS: Operation not possible due to RF-kill
 + sleep 50
 + true
 + sleep 10
-[2024-10-16 15:55:34] [NOTICE] dnscrypt-proxy 2.1.5
 [INFO  encrypted_dns] State file [encrypted-dns.state] found; using existing provider key
 [INFO  encrypted_dns] Public server address: 198.51.100.1:443
 [INFO  encrypted_dns] Provider public key: 846d9783830ad5ac704a1653a64b69d4ec07cb2e7e4cb2041f85cb817d2710d5
 [INFO  encrypted_dns] Provider name: 2.dnscrypt-cert.secure.dns.test
 [INFO  encrypted_dns] DNS Stamp: sdns://AQcAAAAAAAAAEDE5OC41MS4xMDAuMTo0NDMghG2Xg4MK1axwShZTpktp1OwHyy5-TLIEH4XLgX0nENUfMi5kbnNjcnlwdC1jZXJ0LnNlY3VyZS5kbnMudGVzdA
-[2024-10-16 15:55:34] [NOTICE] Network connectivity detected
-[2024-10-16 15:55:34] [NOTICE] Now listening to 127.0.0.1:53 [UDP]
-[2024-10-16 15:55:34] [NOTICE] Now listening to 127.0.0.1:53 [TCP]
-[2024-10-16 15:55:34] [NOTICE] Source [public-resolvers] loaded
-[2024-10-16 15:55:34] [NOTICE] Source [relays] loaded
-[2024-10-16 15:55:34] [NOTICE] Firefox workaround initialized
-[2024-10-16 15:55:34] [NOTICE] Loading the set of blocking rules from [blocked_names.txt]
-[2024-10-16 15:55:35] [NOTICE] [ams-doh-nl] OK (DoH) - rtt: 246ms
-[2024-10-16 15:55:36] [NOTICE] [dns.sb] OK (DoH) - rtt: 203ms
-[2024-10-16 15:55:37] [NOTICE] [doh.appliedprivacy.net] OK (DoH) - rtt: 305ms
-[2024-10-16 15:55:39] [NOTICE] [njalla-doh] OK (DoH) - rtt: 304ms
-[2024-10-16 15:55:39] [NOTICE] [myserver] TIMEOUT
-[2024-10-16 15:55:41] [NOTICE] [artikel10-doh-ipv4] OK (DoH) - rtt: 306ms
-[2024-10-16 15:55:42] [NOTICE] [doh.ffmuc.net] OK (DoH) - rtt: 303ms
+[2024-10-16 15:22:49] [NOTICE] dnscrypt-proxy 2.1.5
+[2024-10-16 15:22:50] [NOTICE] Network not available yet -- waiting...
+[2024-10-16 15:22:55] [NOTICE] Network connectivity detected
+[2024-10-16 15:22:55] [NOTICE] Now listening to 127.0.0.1:53 [UDP]
+[2024-10-16 15:22:55] [NOTICE] Now listening to 127.0.0.1:53 [TCP]
+[2024-10-16 15:22:55] [NOTICE] Source [public-resolvers] loaded
+[2024-10-16 15:22:55] [NOTICE] Source [relays] loaded
+[2024-10-16 15:22:55] [NOTICE] Firefox workaround initialized
+[2024-10-16 15:22:55] [NOTICE] Loading the set of blocking rules from [blocked_names.txt]
++ ifconfig wlo1
++ grep inet
++ ifconfig eth0
++ grep inet
+eth0: erro obtendo informações da interface: dispositivo não encontrado
++ echo 'not connected, macchange in effect'
+not connected, macchange in effect
++ ifconfig eth0 down
+eth0: ERRO ao obter marcadores da interface: Dispositivo inexistente
++ ifconfig wlo1 down
++ macchanger -r eth0
+/etc/dnscrypt-proxy/macchange.sh: linha 18: macchanger: comando não encontrado
++ ifconfig eth0 up
+eth0: ERRO ao obter marcadores da interface: Dispositivo inexistente
++ macchanger -r wlo1
+/etc/dnscrypt-proxy/macchange.sh: linha 22: macchanger: comando não encontrado
++ ifconfig wlo1 up
+SIOCSIFFLAGS: Operação não permitida em razão de RF-kill
++ sleep 50
+[2024-10-16 15:23:00] [NOTICE] Service is not usable yet
+[2024-10-16 15:23:00] [NOTICE] Resolving server host [dns.nextdns.io] using bootstrap resolvers over udp
+[2024-10-16 15:23:00] [NOTICE] Resolving server host [dns.nextdns.io] using bootstrap resolvers over tcp
+[2024-10-16 15:23:00] [NOTICE] Bootstrap resolvers didn't respond - Trying with the system resolver as a last resort
+[2024-10-16 15:23:00] [ERROR] Unable to resolve [dns.nextdns.io] - Make sure that the system resolver works, or that `bootstrap_resolvers` has been set to resolvers that can be reached
+[2024-10-16 15:23:00] [NOTICE] Service is not usable yet
+[2024-10-16 15:23:00] [NOTICE] Resolving server host [dns.nextdns.io] using bootstrap resolvers over udp
+[2024-10-16 15:23:00] [NOTICE] Resolving server host [dns.nextdns.io] using bootstrap resolvers over tcp
+[2024-10-16 15:23:00] [NOTICE] Bootstrap resolvers didn't respond - Trying with the system resolver as a last resort
+[2024-10-16 15:23:00] [ERROR] Unable to resolve [dns.nextdns.io] - Make sure that the system resolver works, or that `bootstrap_resolvers` has been set to resolvers that can be reached
+[2024-10-16 15:23:00] [NOTICE] [myserver] TIMEOUT
+[2024-10-16 15:23:00] [NOTICE] Service is not usable yet
+[2024-10-16 15:23:00] [NOTICE] Resolving server host [doh.appliedprivacy.net] using bootstrap resolvers over udp
+[2024-10-16 15:23:00] [NOTICE] Resolving server host [doh.appliedprivacy.net] using bootstrap resolvers over tcp
+[2024-10-16 15:23:00] [NOTICE] Bootstrap resolvers didn't respond - Trying with the system resolver as a last resort
+[2024-10-16 15:23:00] [ERROR] Unable to resolve [doh.appliedprivacy.net] - Make sure that the system resolver works, or that `bootstrap_resolvers` has been set to resolvers that can be reached
+[2024-10-16 15:23:00] [NOTICE] Service is not usable yet
+[2024-10-16 15:23:00] [NOTICE] Resolving server host [doh.appliedprivacy.net] using bootstrap resolvers over udp
+[2024-10-16 15:23:00] [NOTICE] Resolving server host [doh.appliedprivacy.net] using bootstrap resolvers over tcp
+[2024-10-16 15:23:00] [NOTICE] Bootstrap resolvers didn't respond - Trying with the system resolver as a last resort
+[2024-10-16 15:23:00] [ERROR] Unable to resolve [doh.appliedprivacy.net] - Make sure that the system resolver works, or that `bootstrap_resolvers` has been set to resolvers that can be reached
+[2024-10-16 15:23:00] [NOTICE] Service is not usable yet
+[2024-10-16 15:23:00] [NOTICE] Resolving server host [dns.twnic.tw] using bootstrap resolvers over udp
+[2024-10-16 15:23:00] [NOTICE] Resolving server host [dns.twnic.tw] using bootstrap resolvers over tcp
+[2024-10-16 15:23:00] [NOTICE] Bootstrap resolvers didn't respond - Trying with the system resolver as a last resort
+[2024-10-16 15:23:00] [ERROR] Unable to resolve [dns.twnic.tw] - Make sure that the system resolver works, or that `bootstrap_resolvers` has been set to resolvers that can be reached
+[2024-10-16 15:23:00] [NOTICE] Service is not usable yet
+[2024-10-16 15:23:00] [NOTICE] Resolving server host [dns.twnic.tw] using bootstrap resolvers over udp
+[2024-10-16 15:23:00] [NOTICE] Resolving server host [dns.twnic.tw] using bootstrap resolvers over tcp
+[2024-10-16 15:23:00] [NOTICE] Bootstrap resolvers didn't respond - Trying with the system resolver as a last resort
+[2024-10-16 15:23:00] [ERROR] Unable to resolve [dns.twnic.tw] - Make sure that the system resolver works, or that `bootstrap_resolvers` has been set to resolvers that can be reached
+[2024-10-16 15:23:00] [NOTICE] Service is not usable yet
+[2024-10-16 15:23:00] [NOTICE] Resolving server host [jp.tiarap.org] using bootstrap resolvers over udp
+[2024-10-16 15:23:00] [NOTICE] Resolving server host [jp.tiarap.org] using bootstrap resolvers over tcp
+[2024-10-16 15:23:00] [NOTICE] Bootstrap resolvers didn't respond - Trying with the system resolver as a last resort
+[2024-10-16 15:23:00] [ERROR] Unable to resolve [jp.tiarap.org] - Make sure that the system resolver works, or that `bootstrap_resolvers` has been set to resolvers that can be reached
+[2024-10-16 15:23:00] [NOTICE] Service is not usable yet
+[2024-10-16 15:23:00] [NOTICE] Resolving server host [jp.tiarap.org] using bootstrap resolvers over udp
+[2024-10-16 15:23:00] [NOTICE] Resolving server host [jp.tiarap.org] using bootstrap resolvers over tcp
+[2024-10-16 15:23:00] [NOTICE] Bootstrap resolvers didn't respond - Trying with the system resolver as a last resort
+[2024-10-16 15:23:00] [ERROR] Unable to resolve [jp.tiarap.org] - Make sure that the system resolver works, or that `bootstrap_resolvers` has been set to resolvers that can be reached
+[2024-10-16 15:23:00] [NOTICE] Service is not usable yet
+[2024-10-16 15:23:00] [NOTICE] Resolving server host [open.dns0.eu] using bootstrap resolvers over udp
+[2024-10-16 15:23:00] [NOTICE] Resolving server host [open.dns0.eu] using bootstrap resolvers over tcp
+[2024-10-16 15:23:00] [NOTICE] Bootstrap resolvers didn't respond - Trying with the system resolver as a last resort
+[2024-10-16 15:23:00] [ERROR] Unable to resolve [open.dns0.eu] - Make sure that the system resolver works, or that `bootstrap_resolvers` has been set to resolvers that can be reached
+[2024-10-16 15:23:00] [NOTICE] Service is not usable yet
+[2024-10-16 15:23:00] [NOTICE] Resolving server host [open.dns0.eu] using bootstrap resolvers over udp
+[2024-10-16 15:23:00] [NOTICE] Resolving server host [open.dns0.eu] using bootstrap resolvers over tcp
+[2024-10-16 15:23:00] [NOTICE] Bootstrap resolvers didn't respond - Trying with the system resolver as a last resort
+[2024-10-16 15:23:00] [ERROR] Unable to resolve [open.dns0.eu] - Make sure that the system resolver works, or that `bootstrap_resolvers` has been set to resolvers that can be reached
+[2024-10-16 15:23:00] [ERROR] Get "https://ns1.fdn.fr/dns-query?dns=yv4BAAABAAAAAAABAAACAAEAACkQAAAAAAAAFAAMABDeVQoOeXSA3__QrfXQ7g0F": dial tcp 80.67.169.40:443: connect: network is unreachable
+[2024-10-16 15:23:00] [NOTICE] dnscrypt-proxy is waiting for at least one server to be reachable
+[2024-10-16 15:23:01] [NOTICE] Stopped.
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ ifconfig eth0
++ grep inet
+eth0: erro obtendo informações da interface: dispositivo não encontrado
++ echo 'not connected, macchange in effect'
+not connected, macchange in effect
++ ifconfig eth0 down
+eth0: ERRO ao obter marcadores da interface: Dispositivo inexistente
++ ifconfig wlo1 down
++ macchanger -r eth0
+/etc/dnscrypt-proxy/macchange.sh: linha 18: macchanger: comando não encontrado
++ ifconfig eth0 up
+eth0: ERRO ao obter marcadores da interface: Dispositivo inexistente
++ macchanger -r wlo1
+/etc/dnscrypt-proxy/macchange.sh: linha 22: macchanger: comando não encontrado
++ ifconfig wlo1 up
+SIOCSIFFLAGS: Operação não permitida em razão de RF-kill
++ sleep 50
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ ifconfig eth0
++ grep inet
+eth0: erro obtendo informações da interface: dispositivo não encontrado
++ echo 'not connected, macchange in effect'
+not connected, macchange in effect
++ ifconfig eth0 down
+eth0: ERRO ao obter marcadores da interface: Dispositivo inexistente
++ ifconfig wlo1 down
++ macchanger -r eth0
+/etc/dnscrypt-proxy/macchange.sh: linha 18: macchanger: comando não encontrado
++ ifconfig eth0 up
+eth0: ERRO ao obter marcadores da interface: Dispositivo inexistente
++ macchanger -r wlo1
+/etc/dnscrypt-proxy/macchange.sh: linha 22: macchanger: comando não encontrado
++ ifconfig wlo1 up
+SIOCSIFFLAGS: Operação não permitida em razão de RF-kill
++ sleep 50
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ ifconfig eth0
++ grep inet
+eth0: erro obtendo informações da interface: dispositivo não encontrado
++ echo 'not connected, macchange in effect'
+not connected, macchange in effect
++ ifconfig eth0 down
+eth0: ERRO ao obter marcadores da interface: Dispositivo inexistente
++ ifconfig wlo1 down
++ macchanger -r eth0
+/etc/dnscrypt-proxy/macchange.sh: linha 18: macchanger: comando não encontrado
++ ifconfig eth0 up
+eth0: ERRO ao obter marcadores da interface: Dispositivo inexistente
++ macchanger -r wlo1
+/etc/dnscrypt-proxy/macchange.sh: linha 22: macchanger: comando não encontrado
++ ifconfig wlo1 up
+SIOCSIFFLAGS: Operação não permitida em razão de RF-kill
++ sleep 50
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ ifconfig eth0
++ grep inet
+eth0: erro obtendo informações da interface: dispositivo não encontrado
++ echo 'not connected, macchange in effect'
+not connected, macchange in effect
++ ifconfig eth0 down
+eth0: ERRO ao obter marcadores da interface: Dispositivo inexistente
++ ifconfig wlo1 down
++ macchanger -r eth0
+/etc/dnscrypt-proxy/macchange.sh: linha 18: macchanger: comando não encontrado
++ ifconfig eth0 up
+eth0: ERRO ao obter marcadores da interface: Dispositivo inexistente
++ macchanger -r wlo1
+/etc/dnscrypt-proxy/macchange.sh: linha 22: macchanger: comando não encontrado
++ ifconfig wlo1 up
+SIOCSIFFLAGS: Operação não permitida em razão de RF-kill
++ sleep 50
++ true
++ sleep 10
+[INFO  encrypted_dns] State file [encrypted-dns.state] found; using existing provider key
+[INFO  encrypted_dns] Public server address: 198.51.100.1:443
+[INFO  encrypted_dns] Provider public key: 846d9783830ad5ac704a1653a64b69d4ec07cb2e7e4cb2041f85cb817d2710d5
+[INFO  encrypted_dns] Provider name: 2.dnscrypt-cert.secure.dns.test
+[INFO  encrypted_dns] DNS Stamp: sdns://AQcAAAAAAAAAEDE5OC41MS4xMDAuMTo0NDMghG2Xg4MK1axwShZTpktp1OwHyy5-TLIEH4XLgX0nENUfMi5kbnNjcnlwdC1jZXJ0LnNlY3VyZS5kbnMudGVzdA
+[2024-10-16 15:27:40] [NOTICE] dnscrypt-proxy 2.1.5
+[2024-10-16 15:27:40] [NOTICE] Network connectivity detected
+[2024-10-16 15:27:40] [NOTICE] Now listening to 127.0.0.1:53 [UDP]
+[2024-10-16 15:27:40] [NOTICE] Now listening to 127.0.0.1:53 [TCP]
+[2024-10-16 15:27:40] [NOTICE] Source [public-resolvers] loaded
+[2024-10-16 15:27:40] [NOTICE] Source [relays] loaded
+[2024-10-16 15:27:40] [NOTICE] Firefox workaround initialized
+[2024-10-16 15:27:40] [NOTICE] Loading the set of blocking rules from [blocked_names.txt]
+[2024-10-16 15:27:40] [NOTICE] Service is not usable yet
+[2024-10-16 15:27:40] [NOTICE] Resolving server host [dns.twnic.tw] using bootstrap resolvers over udp
+[2024-10-16 15:27:40] [NOTICE] Resolving server host [dns.twnic.tw] using bootstrap resolvers over tcp
+[2024-10-16 15:27:40] [NOTICE] Bootstrap resolvers didn't respond - Trying with the system resolver as a last resort
+[2024-10-16 15:27:40] [ERROR] Unable to resolve [dns.twnic.tw] - Make sure that the system resolver works, or that `bootstrap_resolvers` has been set to resolvers that can be reached
+[2024-10-16 15:27:40] [NOTICE] Service is not usable yet
+[2024-10-16 15:27:40] [NOTICE] Resolving server host [dns.twnic.tw] using bootstrap resolvers over udp
+[2024-10-16 15:27:40] [NOTICE] Resolving server host [dns.twnic.tw] using bootstrap resolvers over tcp
+[2024-10-16 15:27:40] [NOTICE] Bootstrap resolvers didn't respond - Trying with the system resolver as a last resort
+[2024-10-16 15:27:40] [ERROR] Unable to resolve [dns.twnic.tw] - Make sure that the system resolver works, or that `bootstrap_resolvers` has been set to resolvers that can be reached
+[2024-10-16 15:27:40] [NOTICE] Service is not usable yet
+[2024-10-16 15:27:40] [NOTICE] Resolving server host [open.dns0.eu] using bootstrap resolvers over udp
+[2024-10-16 15:27:40] [NOTICE] Resolving server host [open.dns0.eu] using bootstrap resolvers over tcp
+[2024-10-16 15:27:40] [NOTICE] Bootstrap resolvers didn't respond - Trying with the system resolver as a last resort
+[2024-10-16 15:27:40] [ERROR] Unable to resolve [open.dns0.eu] - Make sure that the system resolver works, or that `bootstrap_resolvers` has been set to resolvers that can be reached
+[2024-10-16 15:27:40] [NOTICE] Service is not usable yet
+[2024-10-16 15:27:40] [NOTICE] Resolving server host [open.dns0.eu] using bootstrap resolvers over udp
+[2024-10-16 15:27:40] [NOTICE] Resolving server host [open.dns0.eu] using bootstrap resolvers over tcp
+[2024-10-16 15:27:40] [NOTICE] Bootstrap resolvers didn't respond - Trying with the system resolver as a last resort
+[2024-10-16 15:27:40] [ERROR] Unable to resolve [open.dns0.eu] - Make sure that the system resolver works, or that `bootstrap_resolvers` has been set to resolvers that can be reached
+[2024-10-16 15:27:41] [NOTICE] [dns.digitalsize.net] OK (DoH) - rtt: 272ms
+[2024-10-16 15:27:43] [NOTICE] [doh-ibksturm] OK (DoH) - rtt: 306ms
+[2024-10-16 15:27:44] [NOTICE] [jp.tiar.app-doh] OK (DoH) - rtt: 403ms
+[2024-10-16 15:27:46] [NOTICE] [nextdns-ultralow] OK (DoH) - rtt: 306ms
+[2024-10-16 15:27:46] [NOTICE] [plan9dns-fl-doh] OK (DoH) - rtt: 204ms
+[2024-10-16 15:27:47] [NOTICE] [fdn] OK (DoH) - rtt: 263ms
+[2024-10-16 15:27:48] [NOTICE] [bortzmeyer] OK (DoH) - rtt: 204ms
+[2024-10-16 15:27:49] [NOTICE] [dnscrypt.ca-ipv4-doh] OK (DoH) - rtt: 224ms
+[2024-10-16 15:27:49] [NOTICE] [nextdns] OK (DoH) - rtt: 7ms
 + ifconfig wlo1
 + grep inet
 + echo 'connected via wlo1'
 connected via wlo1
 + true
 + sleep 10
-[2024-10-16 15:55:45] [NOTICE] [quad101] OK (DoH) - rtt: 311ms
-[2024-10-16 15:55:46] [NOTICE] [nextdns-ultralow] OK (DoH) - rtt: 254ms
-[2024-10-16 15:55:47] [NOTICE] [fdn] OK (DoH) - rtt: 339ms
-[2024-10-16 15:55:48] [NOTICE] [plan9dns-fl-doh] OK (DoH) - rtt: 186ms
-[2024-10-16 15:55:48] [NOTICE] [wikimedia] OK (DoH) - rtt: 5ms
-[2024-10-16 15:55:49] [NOTICE] [bortzmeyer] OK (DoH) - rtt: 307ms
-[2024-10-16 15:55:51] [NOTICE] [mullvad-doh] OK (DoH) - rtt: 203ms
-[2024-10-16 15:55:51] [NOTICE] [cloudflare] OK (DoH) - rtt: 238ms
-[2024-10-16 15:55:52] [NOTICE] [dns.digitalsize.net] OK (DoH) - rtt: 285ms
-[2024-10-16 15:55:53] [NOTICE] [controld-uncensored] OK (DoH) - rtt: 8ms
+[2024-10-16 15:27:50] [NOTICE] [a-and-a] OK (DoH) - rtt: 204ms
+[2024-10-16 15:27:52] [NOTICE] [doh.ffmuc.net-2] OK (DoH) - rtt: 215ms
+[2024-10-16 15:27:53] [NOTICE] [dns.sb] OK (DoH) - rtt: 187ms
+[2024-10-16 15:27:53] [NOTICE] [ams-doh-nl] OK (DoH) - rtt: 203ms
+[2024-10-16 15:27:55] [NOTICE] [nic.cz] OK (DoH) - rtt: 306ms
+[2024-10-16 15:27:56] [NOTICE] [sth-doh-se] OK (DoH) - rtt: 306ms
+[2024-10-16 15:27:57] [NOTICE] [plan9dns-mx-doh] OK (DoH) - rtt: 204ms
+[2024-10-16 15:27:58] [NOTICE] [cloudflare] OK (DoH) - rtt: 309ms
+[2024-10-16 15:27:59] [NOTICE] [doh.ffmuc.net] OK (DoH) - rtt: 307ms
 + ifconfig wlo1
 + grep inet
 + echo 'connected via wlo1'
 connected via wlo1
 + true
 + sleep 10
-[2024-10-16 15:55:54] [NOTICE] [doh-ibksturm] OK (DoH) - rtt: 308ms
-[2024-10-16 15:55:55] [NOTICE] [jp.tiar.app-doh] OK (DoH) - rtt: 289ms
-[2024-10-16 15:55:58] [NOTICE] [dns0-unfiltered] OK (DoH) - rtt: 253ms
-[2024-10-16 15:55:59] [NOTICE] [plan9dns-mx-doh] OK (DoH) - rtt: 205ms
-[2024-10-16 15:55:59] [NOTICE] [controld-unfiltered] OK (DoH) - rtt: 5ms
-[2024-10-16 15:56:00] [NOTICE] [sth-doh-se] OK (DoH) - rtt: 333ms
-[2024-10-16 15:56:02] [NOTICE] [doh-crypto-sx] OK (DoH) - rtt: 521ms
-[2024-10-16 15:56:02] [NOTICE] [nextdns] OK (DoH) - rtt: 6ms
-[2024-10-16 15:56:03] [NOTICE] [a-and-a] OK (DoH) - rtt: 202ms
+[2024-10-16 15:28:00] [NOTICE] [njalla-doh] OK (DoH) - rtt: 307ms
+[2024-10-16 15:28:00] [NOTICE] [controld-unfiltered] OK (DoH) - rtt: 5ms
+[2024-10-16 15:28:02] [NOTICE] [doh.appliedprivacy.net] OK (DoH) - rtt: 307ms
+[2024-10-16 15:28:03] [NOTICE] [adguard-dns-unfiltered-doh] OK (DoH) - rtt: 155ms
+[2024-10-16 15:28:03] [NOTICE] [plan9dns-nj-doh] OK (DoH) - rtt: 204ms
+[2024-10-16 15:28:05] [NOTICE] [artikel10-doh-ipv4] OK (DoH) - rtt: 307ms
+[2024-10-16 15:28:06] [NOTICE] [dns.digitale-gesellschaft.ch] OK (DoH) - rtt: 305ms
++ true
++ sleep 10
+[INFO  encrypted_dns] State file [encrypted-dns.state] found; using existing provider key
+[INFO  encrypted_dns] Public server address: 198.51.100.1:443
+[INFO  encrypted_dns] Provider public key: 846d9783830ad5ac704a1653a64b69d4ec07cb2e7e4cb2041f85cb817d2710d5
+[INFO  encrypted_dns] Provider name: 2.dnscrypt-cert.secure.dns.test
+[INFO  encrypted_dns] DNS Stamp: sdns://AQcAAAAAAAAAEDE5OC41MS4xMDAuMTo0NDMghG2Xg4MK1axwShZTpktp1OwHyy5-TLIEH4XLgX0nENUfMi5kbnNjcnlwdC1jZXJ0LnNlY3VyZS5kbnMudGVzdA
+[2024-10-16 15:35:51] [NOTICE] dnscrypt-proxy 2.1.5
+[2024-10-16 15:35:51] [NOTICE] Network connectivity detected
+[2024-10-16 15:35:51] [NOTICE] Now listening to 127.0.0.1:53 [UDP]
+[2024-10-16 15:35:51] [NOTICE] Now listening to 127.0.0.1:53 [TCP]
+[2024-10-16 15:35:51] [NOTICE] Source [public-resolvers] loaded
+[2024-10-16 15:35:51] [NOTICE] Source [relays] loaded
+[2024-10-16 15:35:51] [NOTICE] Firefox workaround initialized
+[2024-10-16 15:35:51] [NOTICE] Loading the set of blocking rules from [blocked_names.txt]
+[2024-10-16 15:35:52] [NOTICE] [doh.ffmuc.net-2] OK (DoH) - rtt: 307ms
+[2024-10-16 15:35:54] [NOTICE] [bebasdns-unfiltered-doh] OK (DoH) - rtt: 411ms
+[2024-10-16 15:35:55] [NOTICE] [plan9dns-nj-doh] OK (DoH) - rtt: 199ms
+[2024-10-16 15:35:56] [NOTICE] [nextdns-ultralow] OK (DoH) - rtt: 193ms
+[2024-10-16 15:35:57] [NOTICE] [dns.digitalsize.net] OK (DoH) - rtt: 306ms
+[2024-10-16 15:35:58] [NOTICE] [a-and-a] OK (DoH) - rtt: 204ms
+[2024-10-16 15:35:59] [NOTICE] [jp.tiar.app-doh] OK (DoH) - rtt: 306ms
+[2024-10-16 15:36:00] [NOTICE] [mullvad-doh] OK (DoH) - rtt: 118ms
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
+[2024-10-16 15:36:02] [NOTICE] [doh-crypto-sx] OK (DoH) - rtt: 409ms
+[2024-10-16 15:36:03] [NOTICE] [bortzmeyer] OK (DoH) - rtt: 303ms
+[2024-10-16 15:36:04] [NOTICE] [sth-doh-se] OK (DoH) - rtt: 306ms
+[2024-10-16 15:36:04] [NOTICE] [controld-unfiltered] OK (DoH) - rtt: 4ms
+[2024-10-16 15:36:05] [NOTICE] [dns.sb] OK (DoH) - rtt: 188ms
+[2024-10-16 15:36:05] [NOTICE] [controld-uncensored] OK (DoH) - rtt: 9ms
+[2024-10-16 15:36:06] [NOTICE] [restena-doh-ipv4] OK (DoH) - rtt: 200ms
+[2024-10-16 15:36:07] [NOTICE] [nic.cz] OK (DoH) - rtt: 224ms
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
+[2024-10-16 15:36:19] [NOTICE] [doh.ffmuc.net] OK (DoH) - rtt: 470ms
+[2024-10-16 15:36:20] [NOTICE] [adguard-dns-unfiltered-doh] OK (DoH) - rtt: 4ms
+[2024-10-16 15:36:20] [NOTICE] [nextdns] OK (DoH) - rtt: 6ms
+[2024-10-16 15:36:20] [NOTICE] [ams-doh-nl] OK (DoH) - rtt: 192ms
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
+[2024-10-16 15:36:21] [NOTICE] [plan9dns-fl-doh] OK (DoH) - rtt: 113ms
+[2024-10-16 15:36:22] [NOTICE] [fdn] OK (DoH) - rtt: 195ms
+[2024-10-16 15:36:22] [NOTICE] [cloudflare] OK (DoH) - rtt: 245ms
+[2024-10-16 15:36:23] [NOTICE] [dns.digitale-gesellschaft.ch] OK (DoH) - rtt: 206ms
+[2024-10-16 15:36:24] [NOTICE] [plan9dns-mx-doh] OK (DoH) - rtt: 209ms
+[2024-10-16 15:36:25] [NOTICE] [doh-ibksturm] OK (DoH) - rtt: 445ms
+[2024-10-16 15:36:27] [NOTICE] [quad101] OK (DoH) - rtt: 311ms
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
+[2024-10-16 15:36:32] [NOTICE] [myserver] TIMEOUT
+[2024-10-16 15:36:33] [NOTICE] [doh.appliedprivacy.net] OK (DoH) - rtt: 307ms
+[2024-10-16 15:36:37] [NOTICE] Resolving server host [open.dns0.eu] using bootstrap resolvers over udp
+[2024-10-16 15:36:37] [NOTICE] Resolving server host [open.dns0.eu] using bootstrap resolvers over tcp
+[2024-10-16 15:36:37] [NOTICE] Bootstrap resolvers didn't respond - Trying with the system resolver as a last resort
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
+[2024-10-16 15:36:43] [NOTICE] [dns0-unfiltered] OK (DoH) - rtt: 246ms
+[2024-10-16 15:36:45] [NOTICE] [dnscrypt.ca-ipv4-doh] OK (DoH) - rtt: 231ms
+[2024-10-16 15:36:47] [NOTICE] [jp.tiarap.org] OK (DoH) - rtt: 418ms
+[2024-10-16 15:36:47] [NOTICE] [wikimedia] OK (DoH) - rtt: 4ms
+[2024-10-16 15:36:48] [NOTICE] [njalla-doh] OK (DoH) - rtt: 213ms
+[2024-10-16 15:36:49] [NOTICE] [artikel10-doh-ipv4] OK (DoH) - rtt: 239ms
+[2024-10-16 15:36:49] [NOTICE] Sorted latencies:
+[2024-10-16 15:36:49] [NOTICE] -     4ms controld-unfiltered
+[2024-10-16 15:36:49] [NOTICE] -     4ms adguard-dns-unfiltered-doh
+[2024-10-16 15:36:49] [NOTICE] -     4ms wikimedia
+[2024-10-16 15:36:49] [NOTICE] -     6ms nextdns
+[2024-10-16 15:36:49] [NOTICE] -     9ms controld-uncensored
+[2024-10-16 15:36:49] [NOTICE] -   113ms plan9dns-fl-doh
+[2024-10-16 15:36:49] [NOTICE] -   118ms mullvad-doh
+[2024-10-16 15:36:49] [NOTICE] -   188ms dns.sb
+[2024-10-16 15:36:49] [NOTICE] -   192ms ams-doh-nl
+[2024-10-16 15:36:49] [NOTICE] -   193ms nextdns-ultralow
+[2024-10-16 15:36:49] [NOTICE] -   195ms fdn
+[2024-10-16 15:36:49] [NOTICE] -   199ms plan9dns-nj-doh
+[2024-10-16 15:36:49] [NOTICE] -   200ms restena-doh-ipv4
+[2024-10-16 15:36:49] [NOTICE] -   204ms a-and-a
+[2024-10-16 15:36:49] [NOTICE] -   206ms dns.digitale-gesellschaft.ch
+[2024-10-16 15:36:49] [NOTICE] -   209ms plan9dns-mx-doh
+[2024-10-16 15:36:49] [NOTICE] -   213ms njalla-doh
+[2024-10-16 15:36:49] [NOTICE] -   224ms nic.cz
+[2024-10-16 15:36:49] [NOTICE] -   231ms dnscrypt.ca-ipv4-doh
+[2024-10-16 15:36:49] [NOTICE] -   239ms artikel10-doh-ipv4
+[2024-10-16 15:36:49] [NOTICE] -   245ms cloudflare
+[2024-10-16 15:36:49] [NOTICE] -   246ms dns0-unfiltered
+[2024-10-16 15:36:49] [NOTICE] -   303ms bortzmeyer
+[2024-10-16 15:36:49] [NOTICE] -   306ms dns.digitalsize.net
+[2024-10-16 15:36:49] [NOTICE] -   306ms sth-doh-se
+[2024-10-16 15:36:49] [NOTICE] -   306ms jp.tiar.app-doh
+[2024-10-16 15:36:49] [NOTICE] -   307ms doh.ffmuc.net-2
+[2024-10-16 15:36:49] [NOTICE] -   307ms doh.appliedprivacy.net
+[2024-10-16 15:36:49] [NOTICE] -   311ms quad101
+[2024-10-16 15:36:49] [NOTICE] -   409ms doh-crypto-sx
+[2024-10-16 15:36:49] [NOTICE] -   411ms bebasdns-unfiltered-doh
+[2024-10-16 15:36:49] [NOTICE] -   418ms jp.tiarap.org
+[2024-10-16 15:36:49] [NOTICE] -   445ms doh-ibksturm
+[2024-10-16 15:36:49] [NOTICE] -   470ms doh.ffmuc.net
+[2024-10-16 15:36:49] [NOTICE] Server with the lowest initial latency: controld-unfiltered (rtt: 4ms)
+[2024-10-16 15:36:49] [NOTICE] dnscrypt-proxy is ready - live servers: 34
 + ifconfig wlo1
 + grep inet
 + echo 'connected via wlo1'
@@ -2230,58 +2542,257 @@ connected via wlo1
 connected via wlo1
 + true
 + sleep 10
-[2024-10-16 15:56:14] [NOTICE] [nic.cz] OK (DoH) - rtt: 262ms
-[2024-10-16 15:56:14] [NOTICE] [adguard-dns-unfiltered-doh] OK (DoH) - rtt: 11ms
-[2024-10-16 15:56:17] [NOTICE] [jp.tiarap.org] OK (DoH) - rtt: 454ms
-[2024-10-16 15:56:18] [NOTICE] [restena-doh-ipv4] OK (DoH) - rtt: 198ms
-[2024-10-16 15:56:20] [NOTICE] [bebasdns-unfiltered-doh] OK (DoH) - rtt: 370ms
-[2024-10-16 15:56:20] [NOTICE] [dnscrypt.ca-ipv4-doh] OK (DoH) - rtt: 141ms
-[2024-10-16 15:56:21] [NOTICE] [dns.digitale-gesellschaft.ch] OK (DoH) - rtt: 206ms
-[2024-10-16 15:56:23] [NOTICE] [doh.ffmuc.net-2] OK (DoH) - rtt: 304ms
+[2024-10-16 15:37:02] [NOTICE] Stopped.
 + ifconfig wlo1
 + grep inet
 + echo 'connected via wlo1'
 connected via wlo1
 + true
 + sleep 10
-[2024-10-16 15:56:24] [NOTICE] [plan9dns-nj-doh] OK (DoH) - rtt: 236ms
-[2024-10-16 15:56:24] [NOTICE] Sorted latencies:
-[2024-10-16 15:56:24] [NOTICE] -     5ms controld-unfiltered
-[2024-10-16 15:56:24] [NOTICE] -     5ms wikimedia
-[2024-10-16 15:56:24] [NOTICE] -     6ms nextdns
-[2024-10-16 15:56:24] [NOTICE] -     8ms controld-uncensored
-[2024-10-16 15:56:24] [NOTICE] -    11ms adguard-dns-unfiltered-doh
-[2024-10-16 15:56:24] [NOTICE] -   141ms dnscrypt.ca-ipv4-doh
-[2024-10-16 15:56:24] [NOTICE] -   186ms plan9dns-fl-doh
-[2024-10-16 15:56:24] [NOTICE] -   198ms restena-doh-ipv4
-[2024-10-16 15:56:24] [NOTICE] -   202ms a-and-a
-[2024-10-16 15:56:24] [NOTICE] -   203ms dns.sb
-[2024-10-16 15:56:24] [NOTICE] -   203ms mullvad-doh
-[2024-10-16 15:56:24] [NOTICE] -   205ms plan9dns-mx-doh
-[2024-10-16 15:56:24] [NOTICE] -   206ms dns.digitale-gesellschaft.ch
-[2024-10-16 15:56:24] [NOTICE] -   236ms plan9dns-nj-doh
-[2024-10-16 15:56:24] [NOTICE] -   238ms cloudflare
-[2024-10-16 15:56:24] [NOTICE] -   246ms ams-doh-nl
-[2024-10-16 15:56:24] [NOTICE] -   253ms dns0-unfiltered
-[2024-10-16 15:56:24] [NOTICE] -   254ms nextdns-ultralow
-[2024-10-16 15:56:24] [NOTICE] -   262ms nic.cz
-[2024-10-16 15:56:24] [NOTICE] -   285ms dns.digitalsize.net
-[2024-10-16 15:56:24] [NOTICE] -   289ms jp.tiar.app-doh
-[2024-10-16 15:56:24] [NOTICE] -   303ms doh.ffmuc.net
-[2024-10-16 15:56:24] [NOTICE] -   304ms njalla-doh
-[2024-10-16 15:56:24] [NOTICE] -   304ms doh.ffmuc.net-2
-[2024-10-16 15:56:24] [NOTICE] -   305ms doh.appliedprivacy.net
-[2024-10-16 15:56:24] [NOTICE] -   306ms artikel10-doh-ipv4
-[2024-10-16 15:56:24] [NOTICE] -   307ms bortzmeyer
-[2024-10-16 15:56:24] [NOTICE] -   308ms doh-ibksturm
-[2024-10-16 15:56:24] [NOTICE] -   311ms quad101
-[2024-10-16 15:56:24] [NOTICE] -   333ms sth-doh-se
-[2024-10-16 15:56:24] [NOTICE] -   339ms fdn
-[2024-10-16 15:56:24] [NOTICE] -   370ms bebasdns-unfiltered-doh
-[2024-10-16 15:56:24] [NOTICE] -   454ms jp.tiarap.org
-[2024-10-16 15:56:24] [NOTICE] -   521ms doh-crypto-sx
-[2024-10-16 15:56:24] [NOTICE] Server with the lowest initial latency: controld-unfiltered (rtt: 5ms)
-[2024-10-16 15:56:24] [NOTICE] dnscrypt-proxy is ready - live servers: 34
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ ifconfig eth0
++ grep inet
+eth0: erro obtendo informações da interface: dispositivo não encontrado
++ echo 'not connected, macchange in effect'
+not connected, macchange in effect
++ ifconfig eth0 down
+eth0: ERRO ao obter marcadores da interface: Dispositivo inexistente
++ ifconfig wlo1 down
++ macchanger -r eth0
+/etc/dnscrypt-proxy/macchange.sh: linha 18: macchanger: comando não encontrado
++ ifconfig eth0 up
+eth0: ERRO ao obter marcadores da interface: Dispositivo inexistente
++ macchanger -r wlo1
+/etc/dnscrypt-proxy/macchange.sh: linha 22: macchanger: comando não encontrado
++ ifconfig wlo1 up
+SIOCSIFFLAGS: Operação não permitida em razão de RF-kill
++ sleep 50
++ true
++ sleep 10
+[INFO  encrypted_dns] State file [encrypted-dns.state] found; using existing provider key
+[INFO  encrypted_dns] Public server address: 198.51.100.1:443
+[INFO  encrypted_dns] Provider public key: 846d9783830ad5ac704a1653a64b69d4ec07cb2e7e4cb2041f85cb817d2710d5
+[INFO  encrypted_dns] Provider name: 2.dnscrypt-cert.secure.dns.test
+[INFO  encrypted_dns] DNS Stamp: sdns://AQcAAAAAAAAAEDE5OC41MS4xMDAuMTo0NDMghG2Xg4MK1axwShZTpktp1OwHyy5-TLIEH4XLgX0nENUfMi5kbnNjcnlwdC1jZXJ0LnNlY3VyZS5kbnMudGVzdA
+[2024-10-16 20:14:28] [NOTICE] dnscrypt-proxy 2.1.5
+[2024-10-16 20:14:28] [NOTICE] Network connectivity detected
+[2024-10-16 20:14:28] [NOTICE] Now listening to 127.0.0.1:53 [UDP]
+[2024-10-16 20:14:28] [NOTICE] Now listening to 127.0.0.1:53 [TCP]
+[2024-10-16 20:14:28] [NOTICE] Source [relays] loaded
+[2024-10-16 20:14:28] [NOTICE] Source [public-resolvers] loaded
+[2024-10-16 20:14:28] [NOTICE] Firefox workaround initialized
+[2024-10-16 20:14:28] [NOTICE] Loading the set of blocking rules from [blocked_names.txt]
+[2024-10-16 20:14:28] [NOTICE] [plan9dns-nj-doh] OK (DoH) - rtt: 115ms
+[2024-10-16 20:14:29] [NOTICE] [adguard-dns-unfiltered-doh] OK (DoH) - rtt: 7ms
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
+[2024-10-16 20:14:40] [NOTICE] [artikel10-doh-ipv4] OK (DoH) - rtt: 307ms
+[2024-10-16 20:14:42] [NOTICE] [doh.ffmuc.net-2] OK (DoH) - rtt: 257ms
+[2024-10-16 20:14:43] [NOTICE] [nic.cz] OK (DoH) - rtt: 303ms
+[2024-10-16 20:14:44] [NOTICE] [dnscrypt.ca-ipv4-doh] OK (DoH) - rtt: 203ms
+[2024-10-16 20:14:45] [NOTICE] [restena-doh-ipv4] OK (DoH) - rtt: 307ms
+[2024-10-16 20:14:47] [NOTICE] [jp.tiarap.org] OK (DoH) - rtt: 410ms
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
+[2024-10-16 20:14:48] [NOTICE] [a-and-a] OK (DoH) - rtt: 209ms
+[2024-10-16 20:14:49] [NOTICE] [njalla-doh] OK (DoH) - rtt: 276ms
+[2024-10-16 20:14:51] [NOTICE] [bebasdns-unfiltered-doh] OK (DoH) - rtt: 409ms
+[2024-10-16 20:14:56] [NOTICE] [myserver] TIMEOUT
+[2024-10-16 20:14:56] [NOTICE] [controld-uncensored] OK (DoH) - rtt: 6ms
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
+[2024-10-16 20:14:58] [NOTICE] [dns.digitalsize.net] OK (DoH) - rtt: 307ms
+[2024-10-16 20:14:58] [NOTICE] [wikimedia] OK (DoH) - rtt: 7ms
+[2024-10-16 20:14:59] [NOTICE] [mullvad-doh] OK (DoH) - rtt: 206ms
+[2024-10-16 20:15:00] [NOTICE] [plan9dns-fl-doh] OK (DoH) - rtt: 202ms
+[2024-10-16 20:15:01] [NOTICE] [plan9dns-mx-doh] OK (DoH) - rtt: 220ms
+[2024-10-16 20:15:03] [NOTICE] [dns0-unfiltered] OK (DoH) - rtt: 252ms
+[2024-10-16 20:15:04] [NOTICE] [bortzmeyer] OK (DoH) - rtt: 202ms
+[2024-10-16 20:15:04] [NOTICE] [ams-doh-nl] OK (DoH) - rtt: 203ms
+[2024-10-16 20:15:05] [NOTICE] [cloudflare] OK (DoH) - rtt: 198ms
+[2024-10-16 20:15:07] [NOTICE] [doh-crypto-sx] OK (DoH) - rtt: 616ms
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
+[2024-10-16 20:15:08] [NOTICE] [sth-doh-se] OK (DoH) - rtt: 305ms
+[2024-10-16 20:15:09] [NOTICE] [dns.sb] OK (DoH) - rtt: 205ms
+[2024-10-16 20:15:10] [NOTICE] [nextdns-ultralow] OK (DoH) - rtt: 12ms
+[2024-10-16 20:15:11] [NOTICE] [quad101] OK (DoH) - rtt: 330ms
+[2024-10-16 20:15:13] [NOTICE] [jp.tiar.app-doh] OK (DoH) - rtt: 300ms
+[2024-10-16 20:15:14] [NOTICE] [fdn] OK (DoH) - rtt: 306ms
+[2024-10-16 20:15:15] [NOTICE] [doh-ibksturm] OK (DoH) - rtt: 308ms
+[2024-10-16 20:15:15] [NOTICE] [nextdns] OK (DoH) - rtt: 6ms
+[2024-10-16 20:15:15] [NOTICE] [controld-unfiltered] OK (DoH) - rtt: 16ms
+[2024-10-16 20:15:17] [NOTICE] [doh.ffmuc.net] OK (DoH) - rtt: 308ms
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
+[2024-10-16 20:15:19] [NOTICE] [doh.appliedprivacy.net] OK (DoH) - rtt: 306ms
+[2024-10-16 20:15:20] [NOTICE] [dns.digitale-gesellschaft.ch] OK (DoH) - rtt: 307ms
+[2024-10-16 20:15:20] [NOTICE] Sorted latencies:
+[2024-10-16 20:15:20] [NOTICE] -     6ms controld-uncensored
+[2024-10-16 20:15:20] [NOTICE] -     6ms nextdns
+[2024-10-16 20:15:20] [NOTICE] -     7ms adguard-dns-unfiltered-doh
+[2024-10-16 20:15:20] [NOTICE] -     7ms wikimedia
+[2024-10-16 20:15:20] [NOTICE] -    12ms nextdns-ultralow
+[2024-10-16 20:15:20] [NOTICE] -    16ms controld-unfiltered
+[2024-10-16 20:15:20] [NOTICE] -   115ms plan9dns-nj-doh
+[2024-10-16 20:15:20] [NOTICE] -   198ms cloudflare
+[2024-10-16 20:15:20] [NOTICE] -   202ms plan9dns-fl-doh
+[2024-10-16 20:15:20] [NOTICE] -   202ms bortzmeyer
+[2024-10-16 20:15:20] [NOTICE] -   203ms dnscrypt.ca-ipv4-doh
+[2024-10-16 20:15:20] [NOTICE] -   203ms ams-doh-nl
+[2024-10-16 20:15:20] [NOTICE] -   205ms dns.sb
+[2024-10-16 20:15:20] [NOTICE] -   206ms mullvad-doh
+[2024-10-16 20:15:20] [NOTICE] -   209ms a-and-a
+[2024-10-16 20:15:20] [NOTICE] -   220ms plan9dns-mx-doh
+[2024-10-16 20:15:20] [NOTICE] -   252ms dns0-unfiltered
+[2024-10-16 20:15:20] [NOTICE] -   257ms doh.ffmuc.net-2
+[2024-10-16 20:15:20] [NOTICE] -   276ms njalla-doh
+[2024-10-16 20:15:20] [NOTICE] -   300ms jp.tiar.app-doh
+[2024-10-16 20:15:20] [NOTICE] -   303ms nic.cz
+[2024-10-16 20:15:20] [NOTICE] -   305ms sth-doh-se
+[2024-10-16 20:15:20] [NOTICE] -   306ms fdn
+[2024-10-16 20:15:20] [NOTICE] -   306ms doh.appliedprivacy.net
+[2024-10-16 20:15:20] [NOTICE] -   307ms artikel10-doh-ipv4
+[2024-10-16 20:15:20] [NOTICE] -   307ms restena-doh-ipv4
+[2024-10-16 20:15:20] [NOTICE] -   307ms dns.digitalsize.net
+[2024-10-16 20:15:20] [NOTICE] -   307ms dns.digitale-gesellschaft.ch
+[2024-10-16 20:15:20] [NOTICE] -   308ms doh-ibksturm
+[2024-10-16 20:15:20] [NOTICE] -   308ms doh.ffmuc.net
+[2024-10-16 20:15:20] [NOTICE] -   330ms quad101
+[2024-10-16 20:15:20] [NOTICE] -   409ms bebasdns-unfiltered-doh
+[2024-10-16 20:15:20] [NOTICE] -   410ms jp.tiarap.org
+[2024-10-16 20:15:20] [NOTICE] -   616ms doh-crypto-sx
+[2024-10-16 20:15:20] [NOTICE] Server with the lowest initial latency: controld-uncensored (rtt: 6ms)
+[2024-10-16 20:15:20] [NOTICE] dnscrypt-proxy is ready - live servers: 34
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
 + ifconfig wlo1
 + grep inet
 + echo 'connected via wlo1'
