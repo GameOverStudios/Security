@@ -667,3 +667,1237 @@ connected via wlo1
 connected via wlo1
 + true
 + sleep 10
++ true
++ sleep 10
+[INFO  encrypted_dns] State file [encrypted-dns.state] found; using existing provider key
+[INFO  encrypted_dns] Public server address: 198.51.100.1:443
+[INFO  encrypted_dns] Provider public key: 846d9783830ad5ac704a1653a64b69d4ec07cb2e7e4cb2041f85cb817d2710d5
+[INFO  encrypted_dns] Provider name: 2.dnscrypt-cert.secure.dns.test
+[INFO  encrypted_dns] DNS Stamp: sdns://AQcAAAAAAAAAEDE5OC41MS4xMDAuMTo0NDMghG2Xg4MK1axwShZTpktp1OwHyy5-TLIEH4XLgX0nENUfMi5kbnNjcnlwdC1jZXJ0LnNlY3VyZS5kbnMudGVzdA
+[2024-10-16 14:37:36] [NOTICE] dnscrypt-proxy 2.1.5
+[2024-10-16 14:37:36] [NOTICE] Network connectivity detected
+[2024-10-16 14:37:36] [NOTICE] Now listening to 127.0.0.1:53 [UDP]
+[2024-10-16 14:37:36] [NOTICE] Now listening to 127.0.0.1:53 [TCP]
+[2024-10-16 14:37:36] [NOTICE] Source [public-resolvers] loaded
+[2024-10-16 14:37:36] [NOTICE] Source [relays] loaded
+[2024-10-16 14:37:36] [NOTICE] Firefox workaround initialized
+[2024-10-16 14:37:36] [NOTICE] Loading the set of blocking rules from [blocked_names.txt]
+[2024-10-16 14:37:37] [NOTICE] [a-and-a] OK (DoH) - rtt: 203ms
+[2024-10-16 14:37:37] [NOTICE] [controld-uncensored] OK (DoH) - rtt: 5ms
+[2024-10-16 14:37:38] [NOTICE] [ams-doh-nl] OK (DoH) - rtt: 204ms
+[2024-10-16 14:37:39] [NOTICE] [dns.digitalsize.net] OK (DoH) - rtt: 307ms
+[2024-10-16 14:37:39] [NOTICE] [adguard-dns-unfiltered-doh] OK (DoH) - rtt: 109ms
+[2024-10-16 14:37:39] [NOTICE] [controld-unfiltered] OK (DoH) - rtt: 5ms
+[2024-10-16 14:37:45] [NOTICE] [myserver] TIMEOUT
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
+[2024-10-16 14:37:49] [NOTICE] Resolving server host [jp.tiarap.org] using bootstrap resolvers over udp
+[2024-10-16 14:37:53] [NOTICE] Resolving server host [jp.tiarap.org] using bootstrap resolvers over tcp
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
+[2024-10-16 14:37:57] [NOTICE] Bootstrap resolvers didn't respond - Trying with the system resolver as a last resort
++ ifconfig wlo1
++ grep inet
++ ifconfig eth0
++ grep inet
+eth0: error fetching interface information: Device not found
++ echo 'not connected, macchange in effect'
+not connected, macchange in effect
++ ifconfig eth0 down
+eth0: ERROR while getting interface flags: No such device
++ ifconfig wlo1 down
++ macchanger -r eth0
+/etc/dnscrypt-proxy/macchange.sh: line 18: macchanger: command not found
++ ifconfig eth0 up
+eth0: ERROR while getting interface flags: No such device
++ macchanger -r wlo1
+/etc/dnscrypt-proxy/macchange.sh: line 22: macchanger: command not found
++ ifconfig wlo1 up
+SIOCSIFFLAGS: Operation not possible due to RF-kill
++ sleep 50
+[2024-10-16 14:38:17] [ERROR] Unable to resolve [jp.tiarap.org] - Make sure that the system resolver works, or that `bootstrap_resolvers` has been set to resolvers that can be reached
+[2024-10-16 14:38:21] [NOTICE] Resolving server host [jp.tiarap.org] using bootstrap resolvers over udp
+[2024-10-16 14:38:21] [NOTICE] Resolving server host [jp.tiarap.org] using bootstrap resolvers over tcp
+[2024-10-16 14:38:21] [NOTICE] Bootstrap resolvers didn't respond - Trying with the system resolver as a last resort
+[2024-10-16 14:38:31] [ERROR] Unable to resolve [jp.tiarap.org] - Make sure that the system resolver works, or that `bootstrap_resolvers` has been set to resolvers that can be reached
+[2024-10-16 14:38:35] [NOTICE] Resolving server host [dns.nextdns.io] using bootstrap resolvers over udp
+[2024-10-16 14:38:35] [NOTICE] Resolving server host [dns.nextdns.io] using bootstrap resolvers over tcp
+[2024-10-16 14:38:35] [NOTICE] Bootstrap resolvers didn't respond - Trying with the system resolver as a last resort
+[2024-10-16 14:38:45] [ERROR] Unable to resolve [dns.nextdns.io] - Make sure that the system resolver works, or that `bootstrap_resolvers` has been set to resolvers that can be reached
+[2024-10-16 14:38:49] [NOTICE] Resolving server host [dns.nextdns.io] using bootstrap resolvers over udp
+[2024-10-16 14:38:49] [NOTICE] Resolving server host [dns.nextdns.io] using bootstrap resolvers over tcp
+[2024-10-16 14:38:49] [NOTICE] Bootstrap resolvers didn't respond - Trying with the system resolver as a last resort
++ true
++ sleep 10
+[2024-10-16 14:38:59] [ERROR] Unable to resolve [dns.nextdns.io] - Make sure that the system resolver works, or that `bootstrap_resolvers` has been set to resolvers that can be reached
+[2024-10-16 14:39:03] [NOTICE] Resolving server host [doh.appliedprivacy.net] using bootstrap resolvers over udp
+[2024-10-16 14:39:03] [NOTICE] Resolving server host [doh.appliedprivacy.net] using bootstrap resolvers over tcp
+[2024-10-16 14:39:03] [NOTICE] Bootstrap resolvers didn't respond - Trying with the system resolver as a last resort
++ ifconfig wlo1
++ grep inet
++ ifconfig eth0
++ grep inet
+eth0: error fetching interface information: Device not found
++ echo 'not connected, macchange in effect'
+not connected, macchange in effect
++ ifconfig eth0 down
+eth0: ERROR while getting interface flags: No such device
++ ifconfig wlo1 down
++ macchanger -r eth0
+/etc/dnscrypt-proxy/macchange.sh: line 18: macchanger: command not found
++ ifconfig eth0 up
+eth0: ERROR while getting interface flags: No such device
++ macchanger -r wlo1
+/etc/dnscrypt-proxy/macchange.sh: line 22: macchanger: command not found
++ ifconfig wlo1 up
+SIOCSIFFLAGS: Operation not possible due to RF-kill
++ sleep 50
+[2024-10-16 14:39:13] [ERROR] Unable to resolve [doh.appliedprivacy.net] - Make sure that the system resolver works, or that `bootstrap_resolvers` has been set to resolvers that can be reached
+[2024-10-16 14:39:17] [NOTICE] Resolving server host [doh.appliedprivacy.net] using bootstrap resolvers over udp
+[2024-10-16 14:39:17] [NOTICE] Resolving server host [doh.appliedprivacy.net] using bootstrap resolvers over tcp
+[2024-10-16 14:39:17] [NOTICE] Bootstrap resolvers didn't respond - Trying with the system resolver as a last resort
+[2024-10-16 14:39:27] [ERROR] Unable to resolve [doh.appliedprivacy.net] - Make sure that the system resolver works, or that `bootstrap_resolvers` has been set to resolvers that can be reached
+[2024-10-16 14:39:31] [NOTICE] Resolving server host [open.dns0.eu] using bootstrap resolvers over udp
+[2024-10-16 14:39:31] [NOTICE] Resolving server host [open.dns0.eu] using bootstrap resolvers over tcp
+[2024-10-16 14:39:31] [NOTICE] Bootstrap resolvers didn't respond - Trying with the system resolver as a last resort
+[2024-10-16 14:39:41] [ERROR] Unable to resolve [open.dns0.eu] - Make sure that the system resolver works, or that `bootstrap_resolvers` has been set to resolvers that can be reached
+[2024-10-16 14:39:45] [NOTICE] Resolving server host [open.dns0.eu] using bootstrap resolvers over udp
+[2024-10-16 14:39:45] [NOTICE] Resolving server host [open.dns0.eu] using bootstrap resolvers over tcp
+[2024-10-16 14:39:45] [NOTICE] Bootstrap resolvers didn't respond - Trying with the system resolver as a last resort
+[2024-10-16 14:39:55] [ERROR] Unable to resolve [open.dns0.eu] - Make sure that the system resolver works, or that `bootstrap_resolvers` has been set to resolvers that can be reached
++ true
++ sleep 10
+[2024-10-16 14:39:59] [NOTICE] Resolving server host [dns.twnic.tw] using bootstrap resolvers over udp
+[2024-10-16 14:39:59] [NOTICE] Resolving server host [dns.twnic.tw] using bootstrap resolvers over tcp
+[2024-10-16 14:39:59] [NOTICE] Bootstrap resolvers didn't respond - Trying with the system resolver as a last resort
++ ifconfig wlo1
++ grep inet
++ ifconfig eth0
++ grep inet
+eth0: error fetching interface information: Device not found
++ echo 'not connected, macchange in effect'
+not connected, macchange in effect
++ ifconfig eth0 down
+eth0: ERROR while getting interface flags: No such device
++ ifconfig wlo1 down
++ macchanger -r eth0
+/etc/dnscrypt-proxy/macchange.sh: line 18: macchanger: command not found
++ ifconfig eth0 up
+eth0: ERROR while getting interface flags: No such device
++ macchanger -r wlo1
+/etc/dnscrypt-proxy/macchange.sh: line 22: macchanger: command not found
++ ifconfig wlo1 up
+SIOCSIFFLAGS: Operation not possible due to RF-kill
++ sleep 50
+[2024-10-16 14:40:09] [ERROR] Unable to resolve [dns.twnic.tw] - Make sure that the system resolver works, or that `bootstrap_resolvers` has been set to resolvers that can be reached
+[2024-10-16 14:40:13] [NOTICE] Resolving server host [dns.twnic.tw] using bootstrap resolvers over udp
+[2024-10-16 14:40:13] [NOTICE] Resolving server host [dns.twnic.tw] using bootstrap resolvers over tcp
+[2024-10-16 14:40:13] [NOTICE] Bootstrap resolvers didn't respond - Trying with the system resolver as a last resort
+[2024-10-16 14:40:23] [ERROR] Unable to resolve [dns.twnic.tw] - Make sure that the system resolver works, or that `bootstrap_resolvers` has been set to resolvers that can be reached
+[2024-10-16 14:40:23] [NOTICE] Sorted latencies:
+[2024-10-16 14:40:23] [NOTICE] -     5ms controld-uncensored
+[2024-10-16 14:40:23] [NOTICE] -     5ms controld-unfiltered
+[2024-10-16 14:40:23] [NOTICE] -   109ms adguard-dns-unfiltered-doh
+[2024-10-16 14:40:23] [NOTICE] -   203ms a-and-a
+[2024-10-16 14:40:23] [NOTICE] -   204ms ams-doh-nl
+[2024-10-16 14:40:23] [NOTICE] -   307ms dns.digitalsize.net
+[2024-10-16 14:40:23] [NOTICE] Server with the lowest initial latency: controld-uncensored (rtt: 5ms)
+[2024-10-16 14:40:23] [NOTICE] dnscrypt-proxy is ready - live servers: 6
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ ifconfig eth0
++ grep inet
+eth0: error fetching interface information: Device not found
++ echo 'not connected, macchange in effect'
+not connected, macchange in effect
++ ifconfig eth0 down
+eth0: ERROR while getting interface flags: No such device
++ ifconfig wlo1 down
++ macchanger -r eth0
+/etc/dnscrypt-proxy/macchange.sh: line 18: macchanger: command not found
++ ifconfig eth0 up
+eth0: ERROR while getting interface flags: No such device
++ macchanger -r wlo1
+/etc/dnscrypt-proxy/macchange.sh: line 22: macchanger: command not found
++ ifconfig wlo1 up
+SIOCSIFFLAGS: Operation not possible due to RF-kill
++ sleep 50
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ ifconfig eth0
++ grep inet
+eth0: error fetching interface information: Device not found
++ echo 'not connected, macchange in effect'
+not connected, macchange in effect
++ ifconfig eth0 down
+eth0: ERROR while getting interface flags: No such device
++ ifconfig wlo1 down
++ macchanger -r eth0
+/etc/dnscrypt-proxy/macchange.sh: line 18: macchanger: command not found
++ ifconfig eth0 up
+eth0: ERROR while getting interface flags: No such device
++ macchanger -r wlo1
+/etc/dnscrypt-proxy/macchange.sh: line 22: macchanger: command not found
++ ifconfig wlo1 up
+SIOCSIFFLAGS: Operation not possible due to RF-kill
++ sleep 50
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ ifconfig eth0
++ grep inet
+eth0: error fetching interface information: Device not found
++ echo 'not connected, macchange in effect'
+not connected, macchange in effect
++ ifconfig eth0 down
+eth0: ERROR while getting interface flags: No such device
++ ifconfig wlo1 down
++ macchanger -r eth0
+/etc/dnscrypt-proxy/macchange.sh: line 18: macchanger: command not found
++ ifconfig eth0 up
+eth0: ERROR while getting interface flags: No such device
++ macchanger -r wlo1
+/etc/dnscrypt-proxy/macchange.sh: line 22: macchanger: command not found
++ ifconfig wlo1 up
+SIOCSIFFLAGS: Operation not possible due to RF-kill
++ sleep 50
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ ifconfig eth0
++ grep inet
+eth0: error fetching interface information: Device not found
++ echo 'not connected, macchange in effect'
+not connected, macchange in effect
++ ifconfig eth0 down
+eth0: ERROR while getting interface flags: No such device
++ ifconfig wlo1 down
++ macchanger -r eth0
+/etc/dnscrypt-proxy/macchange.sh: line 18: macchanger: command not found
++ ifconfig eth0 up
+eth0: ERROR while getting interface flags: No such device
++ macchanger -r wlo1
+/etc/dnscrypt-proxy/macchange.sh: line 22: macchanger: command not found
++ ifconfig wlo1 up
+SIOCSIFFLAGS: Operation not possible due to RF-kill
++ sleep 50
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ ifconfig eth0
++ grep inet
+eth0: error fetching interface information: Device not found
++ echo 'not connected, macchange in effect'
+not connected, macchange in effect
++ ifconfig eth0 down
+eth0: ERROR while getting interface flags: No such device
++ ifconfig wlo1 down
++ macchanger -r eth0
+/etc/dnscrypt-proxy/macchange.sh: line 18: macchanger: command not found
++ ifconfig eth0 up
+eth0: ERROR while getting interface flags: No such device
++ macchanger -r wlo1
+/etc/dnscrypt-proxy/macchange.sh: line 22: macchanger: command not found
++ ifconfig wlo1 up
+SIOCSIFFLAGS: Operation not possible due to RF-kill
++ sleep 50
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ ifconfig eth0
++ grep inet
+eth0: error fetching interface information: Device not found
++ echo 'not connected, macchange in effect'
+not connected, macchange in effect
++ ifconfig eth0 down
+eth0: ERROR while getting interface flags: No such device
++ ifconfig wlo1 down
++ macchanger -r eth0
+/etc/dnscrypt-proxy/macchange.sh: line 18: macchanger: command not found
++ ifconfig eth0 up
+eth0: ERROR while getting interface flags: No such device
++ macchanger -r wlo1
+/etc/dnscrypt-proxy/macchange.sh: line 22: macchanger: command not found
++ ifconfig wlo1 up
+SIOCSIFFLAGS: Operation not possible due to RF-kill
++ sleep 50
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ ifconfig eth0
++ grep inet
+eth0: error fetching interface information: Device not found
++ echo 'not connected, macchange in effect'
+not connected, macchange in effect
++ ifconfig eth0 down
+eth0: ERROR while getting interface flags: No such device
++ ifconfig wlo1 down
++ macchanger -r eth0
+/etc/dnscrypt-proxy/macchange.sh: line 18: macchanger: command not found
++ ifconfig eth0 up
+eth0: ERROR while getting interface flags: No such device
++ macchanger -r wlo1
+/etc/dnscrypt-proxy/macchange.sh: line 22: macchanger: command not found
++ ifconfig wlo1 up
+SIOCSIFFLAGS: Operation not possible due to RF-kill
++ sleep 50
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ ifconfig eth0
++ grep inet
+eth0: error fetching interface information: Device not found
++ echo 'not connected, macchange in effect'
+not connected, macchange in effect
++ ifconfig eth0 down
+eth0: ERROR while getting interface flags: No such device
++ ifconfig wlo1 down
++ macchanger -r eth0
+/etc/dnscrypt-proxy/macchange.sh: line 18: macchanger: command not found
++ ifconfig eth0 up
+eth0: ERROR while getting interface flags: No such device
++ macchanger -r wlo1
+/etc/dnscrypt-proxy/macchange.sh: line 22: macchanger: command not found
++ ifconfig wlo1 up
+SIOCSIFFLAGS: Operation not possible due to RF-kill
++ sleep 50
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ ifconfig eth0
++ grep inet
+eth0: error fetching interface information: Device not found
++ echo 'not connected, macchange in effect'
+not connected, macchange in effect
++ ifconfig eth0 down
+eth0: ERROR while getting interface flags: No such device
++ ifconfig wlo1 down
++ macchanger -r eth0
+/etc/dnscrypt-proxy/macchange.sh: line 18: macchanger: command not found
++ ifconfig eth0 up
+eth0: ERROR while getting interface flags: No such device
++ macchanger -r wlo1
+/etc/dnscrypt-proxy/macchange.sh: line 22: macchanger: command not found
++ ifconfig wlo1 up
+SIOCSIFFLAGS: Operation not possible due to RF-kill
++ sleep 50
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ ifconfig eth0
++ grep inet
+eth0: error fetching interface information: Device not found
++ echo 'not connected, macchange in effect'
+not connected, macchange in effect
++ ifconfig eth0 down
+eth0: ERROR while getting interface flags: No such device
++ ifconfig wlo1 down
++ macchanger -r eth0
+/etc/dnscrypt-proxy/macchange.sh: line 18: macchanger: command not found
++ ifconfig eth0 up
+eth0: ERROR while getting interface flags: No such device
++ macchanger -r wlo1
+/etc/dnscrypt-proxy/macchange.sh: line 22: macchanger: command not found
++ ifconfig wlo1 up
+SIOCSIFFLAGS: Operation not possible due to RF-kill
++ sleep 50
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ ifconfig eth0
++ grep inet
+eth0: error fetching interface information: Device not found
++ echo 'not connected, macchange in effect'
+not connected, macchange in effect
++ ifconfig eth0 down
+eth0: ERROR while getting interface flags: No such device
++ ifconfig wlo1 down
++ macchanger -r eth0
+/etc/dnscrypt-proxy/macchange.sh: line 18: macchanger: command not found
++ ifconfig eth0 up
+eth0: ERROR while getting interface flags: No such device
++ macchanger -r wlo1
+/etc/dnscrypt-proxy/macchange.sh: line 22: macchanger: command not found
++ ifconfig wlo1 up
+SIOCSIFFLAGS: Operation not possible due to RF-kill
++ sleep 50
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ ifconfig eth0
++ grep inet
+eth0: error fetching interface information: Device not found
++ echo 'not connected, macchange in effect'
+not connected, macchange in effect
++ ifconfig eth0 down
+eth0: ERROR while getting interface flags: No such device
++ ifconfig wlo1 down
++ macchanger -r eth0
+/etc/dnscrypt-proxy/macchange.sh: line 18: macchanger: command not found
++ ifconfig eth0 up
+eth0: ERROR while getting interface flags: No such device
++ macchanger -r wlo1
+/etc/dnscrypt-proxy/macchange.sh: line 22: macchanger: command not found
++ ifconfig wlo1 up
+SIOCSIFFLAGS: Operation not possible due to RF-kill
++ sleep 50
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ ifconfig eth0
++ grep inet
+eth0: error fetching interface information: Device not found
++ echo 'not connected, macchange in effect'
+not connected, macchange in effect
++ ifconfig eth0 down
+eth0: ERROR while getting interface flags: No such device
++ ifconfig wlo1 down
++ macchanger -r eth0
+/etc/dnscrypt-proxy/macchange.sh: line 18: macchanger: command not found
++ ifconfig eth0 up
+eth0: ERROR while getting interface flags: No such device
++ macchanger -r wlo1
+/etc/dnscrypt-proxy/macchange.sh: line 22: macchanger: command not found
++ ifconfig wlo1 up
+SIOCSIFFLAGS: Operation not possible due to RF-kill
++ sleep 50
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ ifconfig eth0
++ grep inet
+eth0: error fetching interface information: Device not found
++ echo 'not connected, macchange in effect'
+not connected, macchange in effect
++ ifconfig eth0 down
+eth0: ERROR while getting interface flags: No such device
++ ifconfig wlo1 down
++ macchanger -r eth0
+/etc/dnscrypt-proxy/macchange.sh: line 18: macchanger: command not found
++ ifconfig eth0 up
+eth0: ERROR while getting interface flags: No such device
++ macchanger -r wlo1
+/etc/dnscrypt-proxy/macchange.sh: line 22: macchanger: command not found
++ ifconfig wlo1 up
+SIOCSIFFLAGS: Operation not possible due to RF-kill
++ sleep 50
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ ifconfig eth0
++ grep inet
+eth0: error fetching interface information: Device not found
++ echo 'not connected, macchange in effect'
+not connected, macchange in effect
++ ifconfig eth0 down
+eth0: ERROR while getting interface flags: No such device
++ ifconfig wlo1 down
++ macchanger -r eth0
+/etc/dnscrypt-proxy/macchange.sh: line 18: macchanger: command not found
++ ifconfig eth0 up
+eth0: ERROR while getting interface flags: No such device
++ macchanger -r wlo1
+/etc/dnscrypt-proxy/macchange.sh: line 22: macchanger: command not found
++ ifconfig wlo1 up
+SIOCSIFFLAGS: Operation not possible due to RF-kill
++ sleep 50
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ ifconfig eth0
++ grep inet
+eth0: error fetching interface information: Device not found
++ echo 'not connected, macchange in effect'
+not connected, macchange in effect
++ ifconfig eth0 down
+eth0: ERROR while getting interface flags: No such device
++ ifconfig wlo1 down
++ macchanger -r eth0
+/etc/dnscrypt-proxy/macchange.sh: line 18: macchanger: command not found
++ ifconfig eth0 up
+eth0: ERROR while getting interface flags: No such device
++ macchanger -r wlo1
+/etc/dnscrypt-proxy/macchange.sh: line 22: macchanger: command not found
++ ifconfig wlo1 up
+SIOCSIFFLAGS: Operation not possible due to RF-kill
++ sleep 50
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ ifconfig eth0
++ grep inet
+eth0: error fetching interface information: Device not found
++ echo 'not connected, macchange in effect'
+not connected, macchange in effect
++ ifconfig eth0 down
+eth0: ERROR while getting interface flags: No such device
++ ifconfig wlo1 down
++ macchanger -r eth0
+/etc/dnscrypt-proxy/macchange.sh: line 18: macchanger: command not found
++ ifconfig eth0 up
+eth0: ERROR while getting interface flags: No such device
++ macchanger -r wlo1
+/etc/dnscrypt-proxy/macchange.sh: line 22: macchanger: command not found
++ ifconfig wlo1 up
+SIOCSIFFLAGS: Operation not possible due to RF-kill
++ sleep 50
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ ifconfig eth0
++ grep inet
+eth0: error fetching interface information: Device not found
++ echo 'not connected, macchange in effect'
+not connected, macchange in effect
++ ifconfig eth0 down
+eth0: ERROR while getting interface flags: No such device
++ ifconfig wlo1 down
++ macchanger -r eth0
+/etc/dnscrypt-proxy/macchange.sh: line 18: macchanger: command not found
++ ifconfig eth0 up
+eth0: ERROR while getting interface flags: No such device
++ macchanger -r wlo1
+/etc/dnscrypt-proxy/macchange.sh: line 22: macchanger: command not found
++ ifconfig wlo1 up
+SIOCSIFFLAGS: Operation not possible due to RF-kill
++ sleep 50
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ ifconfig eth0
++ grep inet
+eth0: error fetching interface information: Device not found
++ echo 'not connected, macchange in effect'
+not connected, macchange in effect
++ ifconfig eth0 down
+eth0: ERROR while getting interface flags: No such device
++ ifconfig wlo1 down
++ macchanger -r eth0
+/etc/dnscrypt-proxy/macchange.sh: line 18: macchanger: command not found
++ ifconfig eth0 up
+eth0: ERROR while getting interface flags: No such device
++ macchanger -r wlo1
+/etc/dnscrypt-proxy/macchange.sh: line 22: macchanger: command not found
++ ifconfig wlo1 up
+SIOCSIFFLAGS: Operation not possible due to RF-kill
++ sleep 50
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ ifconfig eth0
++ grep inet
+eth0: error fetching interface information: Device not found
++ echo 'not connected, macchange in effect'
+not connected, macchange in effect
++ ifconfig eth0 down
+eth0: ERROR while getting interface flags: No such device
++ ifconfig wlo1 down
++ macchanger -r eth0
+/etc/dnscrypt-proxy/macchange.sh: line 18: macchanger: command not found
++ ifconfig eth0 up
+eth0: ERROR while getting interface flags: No such device
++ macchanger -r wlo1
+/etc/dnscrypt-proxy/macchange.sh: line 22: macchanger: command not found
++ ifconfig wlo1 up
+SIOCSIFFLAGS: Operation not possible due to RF-kill
++ sleep 50
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ ifconfig eth0
++ grep inet
+eth0: error fetching interface information: Device not found
++ echo 'not connected, macchange in effect'
+not connected, macchange in effect
++ ifconfig eth0 down
+eth0: ERROR while getting interface flags: No such device
++ ifconfig wlo1 down
++ macchanger -r eth0
+/etc/dnscrypt-proxy/macchange.sh: line 18: macchanger: command not found
++ ifconfig eth0 up
+eth0: ERROR while getting interface flags: No such device
++ macchanger -r wlo1
+/etc/dnscrypt-proxy/macchange.sh: line 22: macchanger: command not found
++ ifconfig wlo1 up
+SIOCSIFFLAGS: Operation not possible due to RF-kill
++ sleep 50
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
+[2024-10-16 15:02:15] [NOTICE] Stopped.
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ true
++ sleep 10
+[INFO  encrypted_dns] State file [encrypted-dns.state] found; using existing provider key
+[INFO  encrypted_dns] Public server address: 198.51.100.1:443
+[INFO  encrypted_dns] Provider public key: 846d9783830ad5ac704a1653a64b69d4ec07cb2e7e4cb2041f85cb817d2710d5
+[INFO  encrypted_dns] Provider name: 2.dnscrypt-cert.secure.dns.test
+[INFO  encrypted_dns] DNS Stamp: sdns://AQcAAAAAAAAAEDE5OC41MS4xMDAuMTo0NDMghG2Xg4MK1axwShZTpktp1OwHyy5-TLIEH4XLgX0nENUfMi5kbnNjcnlwdC1jZXJ0LnNlY3VyZS5kbnMudGVzdA
+[2024-10-16 15:03:09] [NOTICE] dnscrypt-proxy 2.1.5
+[2024-10-16 15:03:09] [NOTICE] Network connectivity detected
+[2024-10-16 15:03:09] [NOTICE] Now listening to 127.0.0.1:53 [UDP]
+[2024-10-16 15:03:09] [NOTICE] Now listening to 127.0.0.1:53 [TCP]
+[2024-10-16 15:03:09] [NOTICE] Source [relays] loaded
+[2024-10-16 15:03:09] [NOTICE] Source [public-resolvers] loaded
+[2024-10-16 15:03:09] [NOTICE] Firefox workaround initialized
+[2024-10-16 15:03:09] [NOTICE] Loading the set of blocking rules from [blocked_names.txt]
+[2024-10-16 15:03:09] [NOTICE] [wikimedia] OK (DoH) - rtt: 7ms
+[2024-10-16 15:03:09] [NOTICE] [controld-uncensored] OK (DoH) - rtt: 5ms
+[2024-10-16 15:03:10] [NOTICE] [mullvad-doh] OK (DoH) - rtt: 204ms
+[2024-10-16 15:03:10] [NOTICE] [nextdns] OK (DoH) - rtt: 3ms
+[2024-10-16 15:03:11] [NOTICE] [dns.digitale-gesellschaft.ch] OK (DoH) - rtt: 205ms
+[2024-10-16 15:03:12] [NOTICE] [njalla-doh] OK (DoH) - rtt: 213ms
+[2024-10-16 15:03:16] [NOTICE] Resolving server host [open.dns0.eu] using bootstrap resolvers over udp
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
+[2024-10-16 15:03:20] [NOTICE] Resolving server host [open.dns0.eu] using bootstrap resolvers over tcp
+[2024-10-16 15:03:25] [NOTICE] Bootstrap resolvers didn't respond - Trying with the system resolver as a last resort
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
+[2024-10-16 15:03:55] [ERROR] Unable to resolve [open.dns0.eu] - Make sure that the system resolver works, or that `bootstrap_resolvers` has been set to resolvers that can be reached
+[2024-10-16 15:03:59] [NOTICE] Resolving server host [open.dns0.eu] using bootstrap resolvers over udp
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
+[2024-10-16 15:04:03] [NOTICE] Resolving server host [open.dns0.eu] using bootstrap resolvers over tcp
+[2024-10-16 15:04:07] [NOTICE] Bootstrap resolvers didn't respond - Trying with the system resolver as a last resort
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
+[2024-10-16 15:04:37] [ERROR] Unable to resolve [open.dns0.eu] - Make sure that the system resolver works, or that `bootstrap_resolvers` has been set to resolvers that can be reached
+[2024-10-16 15:04:38] [NOTICE] [dns.sb] OK (DoH) - rtt: 204ms
+[2024-10-16 15:04:39] [NOTICE] [dnscrypt.ca-ipv4-doh] OK (DoH) - rtt: 204ms
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
+[2024-10-16 15:04:43] [NOTICE] Resolving server host [doh.appliedprivacy.net] using bootstrap resolvers over udp
+[2024-10-16 15:04:47] [NOTICE] Resolving server host [doh.appliedprivacy.net] using bootstrap resolvers over tcp
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
+[2024-10-16 15:04:51] [NOTICE] Bootstrap resolvers didn't respond - Trying with the system resolver as a last resort
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
+[2024-10-16 15:05:21] [ERROR] Unable to resolve [doh.appliedprivacy.net] - Make sure that the system resolver works, or that `bootstrap_resolvers` has been set to resolvers that can be reached
+[2024-10-16 15:05:25] [NOTICE] Resolving server host [doh.appliedprivacy.net] using bootstrap resolvers over udp
+[2024-10-16 15:05:29] [NOTICE] Resolving server host [doh.appliedprivacy.net] using bootstrap resolvers over tcp
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
+[2024-10-16 15:05:33] [NOTICE] Bootstrap resolvers didn't respond - Trying with the system resolver as a last resort
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
+[2024-10-16 15:06:03] [ERROR] Unable to resolve [doh.appliedprivacy.net] - Make sure that the system resolver works, or that `bootstrap_resolvers` has been set to resolvers that can be reached
+[2024-10-16 15:06:06] [NOTICE] [doh-ibksturm] OK (DoH) - rtt: 2259ms
+[2024-10-16 15:06:07] [NOTICE] [plan9dns-mx-doh] OK (DoH) - rtt: 159ms
+[2024-10-16 15:06:08] [NOTICE] [ams-doh-nl] OK (DoH) - rtt: 237ms
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
+[2024-10-16 15:06:12] [NOTICE] Resolving server host [jp.tiarap.org] using bootstrap resolvers over udp
+[2024-10-16 15:06:16] [NOTICE] Resolving server host [jp.tiarap.org] using bootstrap resolvers over tcp
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
+[2024-10-16 15:06:20] [NOTICE] Bootstrap resolvers didn't respond - Trying with the system resolver as a last resort
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
+[2024-10-16 15:06:50] [ERROR] Unable to resolve [jp.tiarap.org] - Make sure that the system resolver works, or that `bootstrap_resolvers` has been set to resolvers that can be reached
+[2024-10-16 15:06:54] [NOTICE] Resolving server host [jp.tiarap.org] using bootstrap resolvers over udp
+[2024-10-16 15:06:58] [NOTICE] Resolving server host [jp.tiarap.org] using bootstrap resolvers over tcp
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
+[2024-10-16 15:07:02] [NOTICE] Bootstrap resolvers didn't respond - Trying with the system resolver as a last resort
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
+[2024-10-16 15:07:32] [ERROR] Unable to resolve [jp.tiarap.org] - Make sure that the system resolver works, or that `bootstrap_resolvers` has been set to resolvers that can be reached
+[2024-10-16 15:07:36] [NOTICE] Resolving server host [dns.twnic.tw] using bootstrap resolvers over udp
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
+[2024-10-16 15:07:40] [NOTICE] Resolving server host [dns.twnic.tw] using bootstrap resolvers over tcp
+[2024-10-16 15:07:44] [NOTICE] Bootstrap resolvers didn't respond - Trying with the system resolver as a last resort
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
+[2024-10-16 15:08:14] [ERROR] Unable to resolve [dns.twnic.tw] - Make sure that the system resolver works, or that `bootstrap_resolvers` has been set to resolvers that can be reached
+[2024-10-16 15:08:18] [NOTICE] Resolving server host [dns.twnic.tw] using bootstrap resolvers over udp
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
+[2024-10-16 15:09:02] [NOTICE] [cloudflare] OK (DoH) - rtt: 236ms
+[2024-10-16 15:09:02] [NOTICE] [controld-unfiltered] OK (DoH) - rtt: 4ms
+[2024-10-16 15:09:03] [NOTICE] [dns.digitalsize.net] OK (DoH) - rtt: 251ms
+[2024-10-16 15:09:04] [NOTICE] [sth-doh-se] OK (DoH) - rtt: 306ms
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
+[2024-10-16 15:09:15] [NOTICE] [nextdns-ultralow] OK (DoH) - rtt: 5ms
+[2024-10-16 15:09:16] [NOTICE] [artikel10-doh-ipv4] OK (DoH) - rtt: 306ms
+[2024-10-16 15:09:17] [NOTICE] [plan9dns-nj-doh] OK (DoH) - rtt: 204ms
+[2024-10-16 15:09:18] [NOTICE] [a-and-a] OK (DoH) - rtt: 204ms
+[2024-10-16 15:09:19] [NOTICE] [jp.tiar.app-doh] OK (DoH) - rtt: 379ms
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
+[2024-10-16 15:09:21] [NOTICE] [bebasdns-unfiltered-doh] OK (DoH) - rtt: 614ms
+[2024-10-16 15:09:23] [NOTICE] [doh.ffmuc.net-2] OK (DoH) - rtt: 306ms
+[2024-10-16 15:09:24] [NOTICE] [doh.ffmuc.net] OK (DoH) - rtt: 308ms
+[2024-10-16 15:09:26] [NOTICE] [doh-crypto-sx] OK (DoH) - rtt: 409ms
+[2024-10-16 15:09:27] [NOTICE] [nic.cz] OK (DoH) - rtt: 306ms
+[2024-10-16 15:09:28] [NOTICE] [bortzmeyer] OK (DoH) - rtt: 206ms
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
+[2024-10-16 15:09:33] [NOTICE] [myserver] TIMEOUT
+[2024-10-16 15:09:33] [NOTICE] Sorted latencies:
+[2024-10-16 15:09:33] [NOTICE] -     3ms nextdns
+[2024-10-16 15:09:33] [NOTICE] -     4ms controld-unfiltered
+[2024-10-16 15:09:33] [NOTICE] -     5ms controld-uncensored
+[2024-10-16 15:09:33] [NOTICE] -     5ms nextdns-ultralow
+[2024-10-16 15:09:33] [NOTICE] -     7ms wikimedia
+[2024-10-16 15:09:33] [NOTICE] -   159ms plan9dns-mx-doh
+[2024-10-16 15:09:33] [NOTICE] -   204ms mullvad-doh
+[2024-10-16 15:09:33] [NOTICE] -   204ms dns.sb
+[2024-10-16 15:09:33] [NOTICE] -   204ms dnscrypt.ca-ipv4-doh
+[2024-10-16 15:09:33] [NOTICE] -   204ms plan9dns-nj-doh
+[2024-10-16 15:09:33] [NOTICE] -   204ms a-and-a
+[2024-10-16 15:09:33] [NOTICE] -   205ms dns.digitale-gesellschaft.ch
+[2024-10-16 15:09:33] [NOTICE] -   206ms bortzmeyer
+[2024-10-16 15:09:33] [NOTICE] -   213ms njalla-doh
+[2024-10-16 15:09:33] [NOTICE] -   236ms cloudflare
+[2024-10-16 15:09:33] [NOTICE] -   237ms ams-doh-nl
+[2024-10-16 15:09:33] [NOTICE] -   251ms dns.digitalsize.net
+[2024-10-16 15:09:33] [NOTICE] -   306ms sth-doh-se
+[2024-10-16 15:09:33] [NOTICE] -   306ms artikel10-doh-ipv4
+[2024-10-16 15:09:33] [NOTICE] -   306ms doh.ffmuc.net-2
+[2024-10-16 15:09:33] [NOTICE] -   306ms nic.cz
+[2024-10-16 15:09:33] [NOTICE] -   308ms doh.ffmuc.net
+[2024-10-16 15:09:33] [NOTICE] -   379ms jp.tiar.app-doh
+[2024-10-16 15:09:33] [NOTICE] -   409ms doh-crypto-sx
+[2024-10-16 15:09:33] [NOTICE] -   614ms bebasdns-unfiltered-doh
+[2024-10-16 15:09:33] [NOTICE] -  2259ms doh-ibksturm
+[2024-10-16 15:09:33] [NOTICE] Server with the lowest initial latency: nextdns (rtt: 3ms)
+[2024-10-16 15:09:33] [NOTICE] dnscrypt-proxy is ready - live servers: 26
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10
++ ifconfig wlo1
++ grep inet
++ echo 'connected via wlo1'
+connected via wlo1
++ true
++ sleep 10

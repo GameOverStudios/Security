@@ -1,0 +1,23 @@
+{
+    "created": "2024-10-16T15:10:39.000000Z",
+    "name": "allow-always-list-usr-sbin-networkmanager-53",
+    "enabled": true,
+    "action": "allow",
+    "duration": "always",
+    "operator": {
+        "type": "list",
+        "operand": "list",
+        "list": [
+            {
+                "type": "simple",
+                "operand": "dest.port",
+                "data": "53"
+            },
+            {
+                "type": "simple",
+                "operand": "process.path",
+                "data": "/usr/sbin/NetworkManager"
+            }
+        ]
+    }
+}

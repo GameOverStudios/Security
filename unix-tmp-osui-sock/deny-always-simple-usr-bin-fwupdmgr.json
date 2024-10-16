@@ -1,0 +1,12 @@
+{
+    "created": "2024-10-16T15:15:14.000000Z",
+    "name": "deny-always-simple-usr-bin-fwupdmgr",
+    "enabled": true,
+    "action": "deny",
+    "duration": "always",
+    "operator": {
+        "type": "simple",
+        "operand": "process.path",
+        "data": "/usr/bin/fwupdmgr"
+    }
+}
