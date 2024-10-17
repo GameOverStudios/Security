@@ -1,6 +1,7 @@
 #!/bin/bash
 
 systemctl start NetworkManager
+sleep 10
 
 pkill dnscrypt-proxy
 pkill encrypted-dns
