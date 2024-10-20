@@ -31,8 +31,8 @@ for IP in ${DNS_IP[@]}; do
     for PROTOCOL in ${DNS_PROTOCOL[@]}; do
         $IP4TABLES -A INPUT  -p $PROTOCOL -s $IP --sport 443 -m state --state ESTABLISHED,RELATED -j ACCEPT
         $IP4TABLES -A OUTPUT -p $PROTOCOL -d $IP --dport 443 -m state --state NEW,ESTABLISHED,RELATED -j ACCEPT
-        $IP4TABLES -A INPUT  -p $PROTOCOL -s $IP --sport 53 -m state --state ESTABLISHED,RELATED -j ACCEPT
-        $IP4TABLES -A OUTPUT -p $PROTOCOL -d $IP --dport 53 -m state --state NEW,ESTABLISHED,RELATED -j ACCEPT
+        #$IP4TABLES -A INPUT  -p $PROTOCOL -s $IP --sport 53 -m state --state ESTABLISHED,RELATED -j ACCEPT
+        #$IP4TABLES -A OUTPUT -p $PROTOCOL -d $IP --dport 53 -m state --state NEW,ESTABLISHED,RELATED -j ACCEPT
     done
 done
 
@@ -114,3 +114,13 @@ done
 #/sbin/iptables -t raw -D PREROUTING -p tcp -m tcp --syn -j CT --notrack
 #/sbin/iptables -D INPUT -p tcp -m tcp -m conntrack --ctstate INVALID,UNTRACKED -j SYNPROXY --sack-perm --timestamp --wscale 7 --mss 1460
 #/sbin/iptables -D INPUT -m conntrack --ctstate INVALID -j DROP
+ ### SSH brute-force protection ###
+
+/sbin/iptables -A INPUT -p tcp --dport ssh -m conntrack --ctstate NEW -m recent --set
+/sbin/iptables -A INPUT -p tcp --dport ssh -m conntrack --ctstate NEW -m recent --update --seconds 60 --hitcount 10 -j DROP
+
+### Protection against port scanning ###
+/sbin/iptables -N port-scanning
+/sbin/iptables -A port-scanning -p tcp --tcp-flags SYN,ACK,FIN,RST RST -m limit --limit 1/s --limit-burst 2 -j RETURN
+/sbin/iptables -A port-scanning -j DROP
+
