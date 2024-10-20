@@ -5,18 +5,18 @@ while true; do
 
     if ifconfig wlo1 | grep "inet" > /dev/null; then
         echo "connected via wlo1"
-    elif ifconfig eth0 | grep "inet" > /dev/null; then
-        echo "connected via eth0"
+    elif ifconfig enp1s0 | grep "inet" > /dev/null; then
+        echo "connected via enp1s0"
     else
         echo "not connected, macchange in effect"
 
         # Turns off the interfaces so we can do some macchange magic
-        ifconfig eth0 down
+        ifconfig enp1s0 down
         ifconfig wlo1 down
 
-        # Changes the MAC address on eth0 to a random one
-        macchanger -r eth0
-        ifconfig eth0 up
+        # Changes the MAC address on enp1s0 to a random one
+        macchanger -r enp1s0
+        ifconfig enp1s0 up
 
         # Changes the MAC address on wlo1 to a random one
         macchanger -r wlo1

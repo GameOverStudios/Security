@@ -1,0 +1,23 @@
+{
+    "created": "2024-10-20T13:54:49.000000Z",
+    "name": "deny-always-list-usr-lib-apt-methods-http-53",
+    "enabled": true,
+    "action": "deny",
+    "duration": "always",
+    "operator": {
+        "type": "list",
+        "operand": "list",
+        "list": [
+            {
+                "type": "simple",
+                "operand": "dest.port",
+                "data": "53"
+            },
+            {
+                "type": "simple",
+                "operand": "process.path",
+                "data": "/usr/lib/apt/methods/http"
+            }
+        ]
+    }
+}

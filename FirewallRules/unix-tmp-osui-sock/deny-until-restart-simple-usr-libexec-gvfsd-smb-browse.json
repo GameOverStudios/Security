@@ -1,0 +1,12 @@
+{
+    "created": "2024-10-20T14:03:35.000000Z",
+    "name": "deny-until-restart-simple-usr-libexec-gvfsd-smb-browse",
+    "enabled": true,
+    "action": "deny",
+    "duration": "until restart",
+    "operator": {
+        "type": "simple",
+        "operand": "process.path",
+        "data": "/usr/libexec/gvfsd-smb-browse"
+    }
+}
