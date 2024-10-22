@@ -1,0 +1,71 @@
+#!/bin/bash
+
+mkdir /etc/dnscrypt-proxy
+cp * /etc/dnscrypt-proxy -R
+
+echo "DNS Resolv"
+echo "[Resolve]" > /etc/systemd/resolved.conf
+echo "DNS=1.1.1.1" >> /etc/systemd/resolved.conf
+echo "FallbackDNS=8.8.8.8" >> /etc/systemd/resolved.conf
+echo "Domains=~." >> /etc/systemd/resolved.conf
+echo "DNSSEC=yes" >> /etc/systemd/resolved.conf
+echo "DNSOverTLS=yes" >> /etc/systemd/resolved.conf
+
+echo "Service Firewall"
+echo "[Unit]" > /etc/systemd/system/firewall.service
+echo "Description=Firewall" >> /etc/systemd/system/firewall.service
+echo "" >> /etc/systemd/system/firewall.service
+echo "[Service]" >> /etc/systemd/system/firewall.service
+echo "StartLimitInterval=5" >> /etc/systemd/system/firewall.service
+echo "StartLimitBurst=10" >> /etc/systemd/system/firewall.service
+echo "ExecStart=/etc/dnscrypt-proxy/firewall-start" >> /etc/systemd/system/firewall.service
+echo "WorkingDirectory=/etc/dnscrypt-proxy" >> /etc/systemd/system/firewall.service
+echo "Restart=always" >> /etc/systemd/system/firewall.service
+echo "RestartSec=120" >> /etc/systemd/system/firewall.service
+echo "" >> /etc/systemd/system/firewall.service
+echo "[Install]" >> /etc/systemd/system/firewall.service
+echo "WantedBy=multi-user.target" >> /etc/systemd/system/firewall.service
+
+
+echo "Service CloudFlare"
+echo "[Unit]" > /etc/systemd/system/cloudflare.service
+echo "Description=CloudFlare" >> /etc/systemd/system/cloudflare.service
+echo "" >> /etc/systemd/system/cloudflare.service
+echo "[Service]" >> /etc/systemd/system/cloudflare.service
+echo "StartLimitInterval=5" >> /etc/systemd/system/cloudflare.service
+echo "StartLimitBurst=10" >> /etc/systemd/system/cloudflare.service
+echo "ExecStart=/etc/dnscrypt-proxy/cloudflared proxy-dns --port 8888" >> /etc/systemd/system/cloudflare.service
+echo "WorkingDirectory=/etc/dnscrypt-proxy" >> /etc/systemd/system/cloudflare.service
+echo "Restart=always" >> /etc/systemd/system/cloudflare.service
+echo "RestartSec=120" >> /etc/systemd/system/cloudflare.service
+echo "" >> /etc/systemd/system/cloudflare.service
+echo "[Install]" >> /etc/systemd/system/cloudflare.service
+echo "WantedBy=multi-user.target" >> /etc/systemd/system/cloudflare.service
+
+
+echo "Service DNSCrypt Proxy"
+echo "[Unit]" > /etc/systemd/system/dnscrypt-proxy.service
+echo "Description=DNSCrypt Proxy" >> /etc/systemd/system/dnscrypt-proxy.service
+echo "" >> /etc/systemd/system/dnscrypt-proxy.service
+echo "[Service]" >> /etc/systemd/system/dnscrypt-proxy.service
+echo "StartLimitInterval=5" >> /etc/systemd/system/dnscrypt-proxy.service
+echo "StartLimitBurst=10" >> /etc/systemd/system/dnscrypt-proxy.service
+echo "ExecStart=/etc/dnscrypt-proxy -config dnscrypt-proxy.toml" >> /etc/systemd/system/dnscrypt-proxy.service
+echo "WorkingDirectory=/etc/dnscrypt-proxy" >> /etc/systemd/system/dnscrypt-proxy.service
+echo "Restart=always" >> /etc/systemd/system/dnscrypt-proxy.service
+echo "RestartSec=120" >> /etc/systemd/system/dnscrypt-proxy.service
+echo "EnvironmentFile=-/etc/sysconfig/dnscrypt-proxy" >> /etc/systemd/system/dnscrypt-proxy.service
+echo "" >> /etc/systemd/system/dnscrypt-proxy.service
+echo "[Install]" >> /etc/systemd/system/dnscrypt-proxy.service
+echo "WantedBy=multi-user.target" >> /etc/systemd/system/dnscrypt-proxy.service
+
+systemctl enable firewall
+systemctl start firewall
+
+#systemctl enable cloudflare
+#systemctl start cloudflare
+
+#systemctl enable dnscrypt-proxy
+#systemctl start dnscrypt-proxy
+
+./start

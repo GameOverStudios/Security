@@ -1,8 +1,0 @@
-
-systemctl disable NetworkManager
-systemctl stop NetworkManager
-
-pkill dnscrypt-proxy
-pkill encrypted-dns
-pkill macchange
-pkill start

@@ -26,7 +26,6 @@ listen_addrs = [
     { local = "0.0.0.0:443",    external = "198.51.100.1:443" }
 ]
 
-
 ## Upstream DNS server and port
 
 upstream_addr = "8.8.8.8:53"
