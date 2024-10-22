@@ -3,13 +3,15 @@
 mkdir /etc/dnscrypt-proxy
 cp * /etc/dnscrypt-proxy -R
 
-echo "DNS Resolv"
+echo "DNS Resolve"
 echo "[Resolve]" > /etc/systemd/resolved.conf
 echo "DNS=1.1.1.1" >> /etc/systemd/resolved.conf
 echo "FallbackDNS=8.8.8.8" >> /etc/systemd/resolved.conf
 echo "Domains=~." >> /etc/systemd/resolved.conf
 echo "DNSSEC=yes" >> /etc/systemd/resolved.conf
 echo "DNSOverTLS=yes" >> /etc/systemd/resolved.conf
+
+systemctl restart systemd-resolved
 
 echo "Service Firewall"
 echo "[Unit]" > /etc/systemd/system/firewall.service

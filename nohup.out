@@ -116,3 +116,181 @@
 [2024-10-22 13:04:59] [NOTICE] -  3333ms doh-ibksturm
 [2024-10-22 13:04:59] [NOTICE] Server with the lowest initial latency: wikimedia (rtt: 3ms)
 [2024-10-22 13:04:59] [NOTICE] dnscrypt-proxy is ready - live servers: 34
+[2024-10-22 14:58:50] [NOTICE] Stopped.
+[2024-10-22 14:58:55] [NOTICE] dnscrypt-proxy 2.1.5
+2024-10-22T17:58:55Z INF Adding DNS upstream url=https://1.1.1.1/dns-query
+2024-10-22T17:58:55Z INF Adding DNS upstream url=https://1.0.0.1/dns-query
+2024-10-22T17:58:55Z INF Starting DNS over HTTPS proxy server address=dns://localhost:8888
+[2024-10-22 14:58:55] [NOTICE] Network not available yet -- waiting...
+2024-10-22T17:58:55Z INF Starting metrics server on 127.0.0.1:40163/metrics
+[2024-10-22 14:59:09] [NOTICE] Stopped.
+[2024-10-22 14:59:20] [NOTICE] dnscrypt-proxy 2.1.5
+[2024-10-22 14:59:20] [NOTICE] Network not available yet -- waiting...
+2024-10-22T17:59:20Z INF Adding DNS upstream url=https://1.1.1.1/dns-query
+2024-10-22T17:59:20Z INF Adding DNS upstream url=https://1.0.0.1/dns-query
+2024-10-22T17:59:20Z INF Starting DNS over HTTPS proxy server address=dns://localhost:8888
+2024-10-22T17:59:20Z INF Starting metrics server on 127.0.0.1:45057/metrics
+[2024-10-22 14:59:38] [NOTICE] Network connectivity detected
+[2024-10-22 14:59:38] [NOTICE] Now listening to 127.0.0.1:53 [UDP]
+[2024-10-22 14:59:38] [NOTICE] Now listening to 127.0.0.1:53 [TCP]
+[2024-10-22 14:59:38] [NOTICE] Source [public-resolvers] loaded
+[2024-10-22 14:59:38] [NOTICE] Source [relays] loaded
+[2024-10-22 14:59:38] [NOTICE] Firefox workaround initialized
+[2024-10-22 14:59:38] [NOTICE] Loading the set of blocking rules from [blocked_names.txt]
+[2024-10-22 14:59:39] [NOTICE] [controld-uncensored] OK (DoH) - rtt: 5ms
+[2024-10-22 14:59:39] [NOTICE] [plan9dns-mx-doh] OK (DoH) - rtt: 161ms
+[2024-10-22 14:59:51] [NOTICE] [doh.ffmuc.net] OK (DoH) - rtt: 248ms
+[2024-10-22 14:59:52] [NOTICE] [jp.tiar.app-doh] OK (DoH) - rtt: 293ms
+[2024-10-22 14:59:52] [NOTICE] [plan9dns-fl-doh] OK (DoH) - rtt: 108ms
+[2024-10-22 14:59:53] [NOTICE] [fdn] OK (DoH) - rtt: 194ms
+[2024-10-22 14:59:54] [NOTICE] [dnscrypt.ca-ipv4-doh] OK (DoH) - rtt: 165ms
+[2024-10-22 14:59:54] [NOTICE] [nextdns] OK (DoH) - rtt: 3ms
+[2024-10-22 14:59:55] [NOTICE] [sth-doh-se] OK (DoH) - rtt: 231ms
+[2024-10-22 14:59:58] [NOTICE] [bebasdns-unfiltered-doh] OK (DoH) - rtt: 410ms
+[2024-10-22 14:59:58] [NOTICE] [adguard-dns-unfiltered-doh] OK (DoH) - rtt: 10ms
+[2024-10-22 15:00:01] [NOTICE] [quad101] OK (DoH) - rtt: 326ms
+[2024-10-22 15:00:02] [NOTICE] [njalla-doh] OK (DoH) - rtt: 225ms
+[2024-10-22 15:00:03] [NOTICE] [doh-crypto-sx] OK (DoH) - rtt: 314ms
+[2024-10-22 15:00:04] [NOTICE] [restena-doh-ipv4] OK (DoH) - rtt: 342ms
+[2024-10-22 15:00:05] [NOTICE] [artikel10-doh-ipv4] OK (DoH) - rtt: 278ms
+[2024-10-22 15:00:06] [NOTICE] [mullvad-doh] OK (DoH) - rtt: 127ms
+[2024-10-22 15:00:09] [NOTICE] [dns0-unfiltered] OK (DoH) - rtt: 455ms
+[2024-10-22 15:00:09] [NOTICE] [myserver] TIMEOUT
+[2024-10-22 15:00:11] [NOTICE] [doh.appliedprivacy.net] OK (DoH) - rtt: 240ms
+[2024-10-22 15:00:12] [NOTICE] [dns.digitalsize.net] OK (DoH) - rtt: 232ms
+[2024-10-22 15:00:13] [NOTICE] [a-and-a] OK (DoH) - rtt: 255ms
+[2024-10-22 15:00:15] [NOTICE] [ams-doh-nl] OK (DoH) - rtt: 343ms
+[2024-10-22 15:00:16] [NOTICE] [dns.digitale-gesellschaft.ch] OK (DoH) - rtt: 223ms
+[2024-10-22 15:00:17] [NOTICE] [dns.sb] OK (DoH) - rtt: 218ms
+[2024-10-22 15:00:17] [NOTICE] [controld-unfiltered] OK (DoH) - rtt: 10ms
+[2024-10-22 15:00:17] [NOTICE] [wikimedia] OK (DoH) - rtt: 17ms
+[2024-10-22 15:00:18] [NOTICE] [doh.ffmuc.net-2] OK (DoH) - rtt: 254ms
+[2024-10-22 15:00:22] [NOTICE] [doh-ibksturm] OK (DoH) - rtt: 3527ms
+[2024-10-22 15:00:23] [NOTICE] [bortzmeyer] OK (DoH) - rtt: 193ms
+[2024-10-22 15:00:25] [NOTICE] [nic.cz] OK (DoH) - rtt: 1175ms
+[2024-10-22 15:00:26] [NOTICE] [cloudflare] OK (DoH) - rtt: 126ms
+[2024-10-22 15:00:27] [NOTICE] [jp.tiarap.org] OK (DoH) - rtt: 302ms
+[2024-10-22 15:00:28] [NOTICE] [nextdns-ultralow] OK (DoH) - rtt: 115ms
+[2024-10-22 15:00:28] [NOTICE] [plan9dns-nj-doh] OK (DoH) - rtt: 116ms
+[2024-10-22 15:00:28] [NOTICE] Sorted latencies:
+[2024-10-22 15:00:28] [NOTICE] -     3ms nextdns
+[2024-10-22 15:00:28] [NOTICE] -     5ms controld-uncensored
+[2024-10-22 15:00:28] [NOTICE] -    10ms adguard-dns-unfiltered-doh
+[2024-10-22 15:00:28] [NOTICE] -    10ms controld-unfiltered
+[2024-10-22 15:00:28] [NOTICE] -    17ms wikimedia
+[2024-10-22 15:00:28] [NOTICE] -   108ms plan9dns-fl-doh
+[2024-10-22 15:00:28] [NOTICE] -   115ms nextdns-ultralow
+[2024-10-22 15:00:28] [NOTICE] -   116ms plan9dns-nj-doh
+[2024-10-22 15:00:28] [NOTICE] -   126ms cloudflare
+[2024-10-22 15:00:28] [NOTICE] -   127ms mullvad-doh
+[2024-10-22 15:00:28] [NOTICE] -   161ms plan9dns-mx-doh
+[2024-10-22 15:00:28] [NOTICE] -   165ms dnscrypt.ca-ipv4-doh
+[2024-10-22 15:00:28] [NOTICE] -   193ms bortzmeyer
+[2024-10-22 15:00:28] [NOTICE] -   194ms fdn
+[2024-10-22 15:00:28] [NOTICE] -   218ms dns.sb
+[2024-10-22 15:00:28] [NOTICE] -   223ms dns.digitale-gesellschaft.ch
+[2024-10-22 15:00:28] [NOTICE] -   225ms njalla-doh
+[2024-10-22 15:00:28] [NOTICE] -   231ms sth-doh-se
+[2024-10-22 15:00:28] [NOTICE] -   232ms dns.digitalsize.net
+[2024-10-22 15:00:28] [NOTICE] -   240ms doh.appliedprivacy.net
+[2024-10-22 15:00:28] [NOTICE] -   248ms doh.ffmuc.net
+[2024-10-22 15:00:28] [NOTICE] -   254ms doh.ffmuc.net-2
+[2024-10-22 15:00:28] [NOTICE] -   255ms a-and-a
+[2024-10-22 15:00:28] [NOTICE] -   278ms artikel10-doh-ipv4
+[2024-10-22 15:00:28] [NOTICE] -   293ms jp.tiar.app-doh
+[2024-10-22 15:00:28] [NOTICE] -   302ms jp.tiarap.org
+[2024-10-22 15:00:28] [NOTICE] -   314ms doh-crypto-sx
+[2024-10-22 15:00:28] [NOTICE] -   326ms quad101
+[2024-10-22 15:00:28] [NOTICE] -   342ms restena-doh-ipv4
+[2024-10-22 15:00:28] [NOTICE] -   343ms ams-doh-nl
+[2024-10-22 15:00:28] [NOTICE] -   410ms bebasdns-unfiltered-doh
+[2024-10-22 15:00:28] [NOTICE] -   455ms dns0-unfiltered
+[2024-10-22 15:00:28] [NOTICE] -  1175ms nic.cz
+[2024-10-22 15:00:28] [NOTICE] -  3527ms doh-ibksturm
+[2024-10-22 15:00:28] [NOTICE] Server with the lowest initial latency: nextdns (rtt: 3ms)
+[2024-10-22 15:00:28] [NOTICE] dnscrypt-proxy is ready - live servers: 34
+[2024-10-22 15:11:52] [NOTICE] Stopped.
+[2024-10-22 15:12:09] [NOTICE] dnscrypt-proxy 2.1.5
+[2024-10-22 15:12:09] [NOTICE] Network connectivity detected
+[2024-10-22 15:12:09] [NOTICE] Now listening to 127.0.0.1:53 [UDP]
+[2024-10-22 15:12:09] [NOTICE] Now listening to 127.0.0.1:53 [TCP]
+[2024-10-22 15:12:09] [NOTICE] Source [public-resolvers] loaded
+[2024-10-22 15:12:09] [NOTICE] Source [relays] loaded
+[2024-10-22 15:12:09] [NOTICE] Firefox workaround initialized
+[2024-10-22 15:12:09] [NOTICE] Loading the set of blocking rules from [blocked_names.txt]
+2024-10-22T18:12:09Z INF Adding DNS upstream url=https://1.1.1.1/dns-query
+2024-10-22T18:12:09Z INF Adding DNS upstream url=https://1.0.0.1/dns-query
+2024-10-22T18:12:09Z INF Starting DNS over HTTPS proxy server address=dns://localhost:8888
+2024-10-22T18:12:09Z INF Starting metrics server on 127.0.0.1:45553/metrics
+[2024-10-22 15:12:09] [NOTICE] [controld-unfiltered] OK (DoH) - rtt: 6ms
+[2024-10-22 15:12:10] [NOTICE] [dns.digitalsize.net] OK (DoH) - rtt: 209ms
+[2024-10-22 15:12:11] [NOTICE] [sth-doh-se] OK (DoH) - rtt: 226ms
+[2024-10-22 15:12:12] [NOTICE] [mullvad-doh] OK (DoH) - rtt: 115ms
+[2024-10-22 15:12:12] [NOTICE] [cloudflare] OK (DoH) - rtt: 294ms
+[2024-10-22 15:12:13] [NOTICE] [nic.cz] OK (DoH) - rtt: 224ms
+[2024-10-22 15:12:15] [NOTICE] [jp.tiar.app-doh] OK (DoH) - rtt: 293ms
+[2024-10-22 15:12:15] [NOTICE] [adguard-dns-unfiltered-doh] OK (DoH) - rtt: 4ms
+[2024-10-22 15:12:15] [NOTICE] [a-and-a] OK (DoH) - rtt: 182ms
+[2024-10-22 15:12:17] [NOTICE] [doh-crypto-sx] OK (DoH) - rtt: 295ms
+[2024-10-22 15:12:18] [NOTICE] [quad101] OK (DoH) - rtt: 312ms
+[2024-10-22 15:12:19] [NOTICE] [plan9dns-fl-doh] OK (DoH) - rtt: 110ms
+[2024-10-22 15:12:20] [NOTICE] [njalla-doh] OK (DoH) - rtt: 210ms
+[2024-10-22 15:12:21] [NOTICE] [artikel10-doh-ipv4] OK (DoH) - rtt: 318ms
+[2024-10-22 15:12:22] [NOTICE] [dns.digitale-gesellschaft.ch] OK (DoH) - rtt: 237ms
+[2024-10-22 15:12:23] [NOTICE] [plan9dns-mx-doh] OK (DoH) - rtt: 288ms
+[2024-10-22 15:12:26] [NOTICE] [bortzmeyer] OK (DoH) - rtt: 193ms
+[2024-10-22 15:12:26] [NOTICE] [nextdns] OK (DoH) - rtt: 4ms
+[2024-10-22 15:12:26] [NOTICE] [controld-uncensored] OK (DoH) - rtt: 5ms
+[2024-10-22 15:12:27] [NOTICE] [doh-ibksturm] OK (DoH) - rtt: 232ms
+[2024-10-22 15:12:28] [NOTICE] [dnscrypt.ca-ipv4-doh] OK (DoH) - rtt: 144ms
+[2024-10-22 15:12:28] [NOTICE] [nextdns-ultralow] OK (DoH) - rtt: 4ms
+[2024-10-22 15:12:28] [NOTICE] [dns.sb] OK (DoH) - rtt: 185ms
+[2024-10-22 15:12:30] [NOTICE] [bebasdns-unfiltered-doh] OK (DoH) - rtt: 374ms
+[2024-10-22 15:12:31] [NOTICE] [ams-doh-nl] OK (DoH) - rtt: 192ms
+[2024-10-22 15:12:33] [NOTICE] [doh.ffmuc.net-2] OK (DoH) - rtt: 259ms
+[2024-10-22 15:12:33] [NOTICE] [myserver] TIMEOUT
+[2024-10-22 15:12:34] [NOTICE] [jp.tiarap.org] OK (DoH) - rtt: 296ms
+[2024-10-22 15:12:35] [NOTICE] [fdn] OK (DoH) - rtt: 195ms
+[2024-10-22 15:12:36] [NOTICE] [restena-doh-ipv4] OK (DoH) - rtt: 199ms
+[2024-10-22 15:12:36] [NOTICE] [doh.ffmuc.net] OK (DoH) - rtt: 213ms
+[2024-10-22 15:12:37] [NOTICE] [wikimedia] OK (DoH) - rtt: 4ms
+[2024-10-22 15:12:47] [NOTICE] [doh.appliedprivacy.net] OK (DoH) - rtt: 214ms
+[2024-10-22 15:12:49] [NOTICE] [dns0-unfiltered] OK (DoH) - rtt: 243ms
+[2024-10-22 15:12:49] [NOTICE] [plan9dns-nj-doh] OK (DoH) - rtt: 266ms
+[2024-10-22 15:12:49] [NOTICE] Sorted latencies:
+[2024-10-22 15:12:49] [NOTICE] -     4ms nextdns-ultralow
+[2024-10-22 15:12:49] [NOTICE] -     4ms adguard-dns-unfiltered-doh
+[2024-10-22 15:12:49] [NOTICE] -     4ms nextdns
+[2024-10-22 15:12:49] [NOTICE] -     4ms wikimedia
+[2024-10-22 15:12:49] [NOTICE] -     5ms controld-uncensored
+[2024-10-22 15:12:49] [NOTICE] -     6ms controld-unfiltered
+[2024-10-22 15:12:49] [NOTICE] -   110ms plan9dns-fl-doh
+[2024-10-22 15:12:49] [NOTICE] -   115ms mullvad-doh
+[2024-10-22 15:12:49] [NOTICE] -   144ms dnscrypt.ca-ipv4-doh
+[2024-10-22 15:12:49] [NOTICE] -   182ms a-and-a
+[2024-10-22 15:12:49] [NOTICE] -   185ms dns.sb
+[2024-10-22 15:12:49] [NOTICE] -   192ms ams-doh-nl
+[2024-10-22 15:12:49] [NOTICE] -   193ms bortzmeyer
+[2024-10-22 15:12:49] [NOTICE] -   195ms fdn
+[2024-10-22 15:12:49] [NOTICE] -   199ms restena-doh-ipv4
+[2024-10-22 15:12:49] [NOTICE] -   209ms dns.digitalsize.net
+[2024-10-22 15:12:49] [NOTICE] -   210ms njalla-doh
+[2024-10-22 15:12:49] [NOTICE] -   213ms doh.ffmuc.net
+[2024-10-22 15:12:49] [NOTICE] -   214ms doh.appliedprivacy.net
+[2024-10-22 15:12:49] [NOTICE] -   224ms nic.cz
+[2024-10-22 15:12:49] [NOTICE] -   226ms sth-doh-se
+[2024-10-22 15:12:49] [NOTICE] -   232ms doh-ibksturm
+[2024-10-22 15:12:49] [NOTICE] -   237ms dns.digitale-gesellschaft.ch
+[2024-10-22 15:12:49] [NOTICE] -   243ms dns0-unfiltered
+[2024-10-22 15:12:49] [NOTICE] -   259ms doh.ffmuc.net-2
+[2024-10-22 15:12:49] [NOTICE] -   266ms plan9dns-nj-doh
+[2024-10-22 15:12:49] [NOTICE] -   288ms plan9dns-mx-doh
+[2024-10-22 15:12:49] [NOTICE] -   293ms jp.tiar.app-doh
+[2024-10-22 15:12:49] [NOTICE] -   294ms cloudflare
+[2024-10-22 15:12:49] [NOTICE] -   295ms doh-crypto-sx
+[2024-10-22 15:12:49] [NOTICE] -   296ms jp.tiarap.org
+[2024-10-22 15:12:49] [NOTICE] -   312ms quad101
+[2024-10-22 15:12:49] [NOTICE] -   318ms artikel10-doh-ipv4
+[2024-10-22 15:12:49] [NOTICE] -   374ms bebasdns-unfiltered-doh
+[2024-10-22 15:12:49] [NOTICE] Server with the lowest initial latency: nextdns-ultralow (rtt: 4ms)
+[2024-10-22 15:12:49] [NOTICE] dnscrypt-proxy is ready - live servers: 34
